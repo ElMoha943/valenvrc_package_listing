@@ -13,8 +13,8 @@
         "text":"View on GitHub"
     },
     "bannerUrl":"banner.png",
-    "githubRepos":[
-        "ElMoha943/com.valenvrc.whitelistedtp"
-    ],
-    "packages":[]
+    "githubRepos":[],
+    "packages":[
+        "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.0/com.valenvrc.whitelistedtp.zip"
+    ]
 }
