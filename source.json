@@ -1,15 +1,15 @@
 {
-    "name":"Example Listing",
-    "id":"com.vrchat.example-listing",
-    "url":"https://vrchat-community.github.io/template-package-listing/index.json",
+    "name":"Valenvrc Listing",
+    "id":"com.valenvrc.example-listing",
+    "url":"https://github.com/ElMoha943/valenvrc_package_listing/index.json",
     "author":{
         "email":"developer@vrchat.com",
-        "name":"VRChat",
-        "url":"https://hello.vrchat.com"
+        "name":"valenvrc",
+        "url":"https://discord.gg/6AcpahXKQu"
     },
     "description":"Example listing of VRChat packages",
     "infoLink":{
-        "url":"http://github.com/vrchat-community/template-package-listing",
+        "url":"https://github.com/ElMoha943/valenvrc_package_listing",
         "text":"View on GitHub"
     },
     "bannerUrl":"banner.png",
