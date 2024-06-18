@@ -13,6 +13,8 @@
         "text":"View on GitHub"
     },
     "bannerUrl":"banner.png",
-    "githubRepos":[],
+    "githubRepos":[
+        "ElMoha943/com.valenvrc.whitelistedtp"
+    ],
     "packages":[]
 }
