@@ -1,7 +1,7 @@
 {
     "name":"Valenvrc Listing",
-    "id":"com.valenvrc.example-listing",
-    "url":"https://ElMoha943.github.io/valenvrc_package_listing/index.json",
+    "id":"com.valenvrc.package_listing",
+    "url":"https:valenvrc.com/index.json",
     "author":{
         "email":"",
         "name":"valenvrc",
@@ -20,6 +20,31 @@
             "releases" : [
                 "https://github.com/ElMoha943/com.valenvrc.public_scripts/releases/download/1.01/com.valenvrc.public_scripts.zip"
             ]
+        },
+        {
+            "name" : "com.valenvrc.whitelistedtp",
+            "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.0.1/com.valenvrc.whitelistedtp.zip"
+            ]
+        },
+        {
+            "name" : "com.valenvrc.pickup_reset_field",
+            "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.pickup_reset_field/releases/download/1.0/com.valenvrc.pickup_reset_field.zip"
+            ]
+        },
+        {
+            "name" : "com.valenvrc.russianroullette",
+            "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/1.0/com.valenvrc.russian_roullette.zip"
+            ]
+        },
+        {
+            "name" : "com.valenvrc.card_games",
+            "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.card_games/releases/download/1.0/com.valenvrc.card_games.zip"
+            ]
         }
+        
     ]
 }
