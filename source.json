@@ -3,11 +3,11 @@
     "id":"com.valenvrc.example-listing",
     "url":"https://github.com/ElMoha943/valenvrc_package_listing/index.json",
     "author":{
-        "email":"developer@vrchat.com",
+        "email":"",
         "name":"valenvrc",
         "url":"https://discord.gg/6AcpahXKQu"
     },
-    "description":"Example listing of VRChat packages",
+    "description":"Val's VRChat utility scripts and toys, enjoy!",
     "infoLink":{
         "url":"https://github.com/ElMoha943/valenvrc_package_listing",
         "text":"View on GitHub"
