@@ -16,9 +16,9 @@
     "githubRepos":[],
     "packages" : [
         {
-            "name" : "com.valenvrc.public_scripts",
+            "name" : "com.valenvrc.common",
             "releases" : [
-                "https://github.com/ElMoha943/com.valenvrc.public_scripts/releases/download/1.01/com.valenvrc.public_scripts.zip"
+                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/1.0.2/com.valenvrc.common-1.0.2.unitypackage"
             ]
         },
         {
