@@ -38,6 +38,7 @@
         {
             "name" : "com.valenvrc.russianroullette",
             "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/1.1.2/com.valenvrc.russian_roullette.zip",
                 "https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/1.1.0/com.valenvrc.russian_roullette.zip"
             ]
         }
