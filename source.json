@@ -31,6 +31,7 @@
         {
             "name" : "com.valenvrc.mirror",
             "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.mirror/releases/download/1.0.1/com.valenvrc.mirror.zip",
                 "https://github.com/ElMoha943/com.valenvrc.mirror/releases/download/1.0.0/com.valenvrc.mirror.zip"
             ]
         },
