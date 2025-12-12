@@ -9,9 +9,11 @@
       "gumroadLink": "https://store.valenvrc.com/l/AdminTablet",
       "features": [
         "Modular & Customizable",
-        "Event Management Tools",
-        "User Controls",
-        "Easy Setup"
+        "Synced and Local Toggles",
+        "Warnings and Announcements",
+        "Mute, Deafen, Freeze and Ban",
+        "Teleport to Players and Locations",
+        "Expandable API and Addon Modules"
       ]
     },
     {
@@ -22,24 +24,26 @@
       "jinxxyLink": "https://jinxxy.com/valenvrc/AlcoholSystem",
       "gumroadLink": "https://store.valenvrc.com/l/AlcoholSystem",
       "features": [
-        "Custom Drinks",
         "Drunk Effects",
         "Puke Mechanic",
-        "Multiplayer Support"
+        "Blackout Mechanic",
+        "Drink Color Selector",
+        "Multiple Glasses",
+        "Expandable and Customizable"
       ]
     },
     {
       "id": "bouncer_system",
       "name": "Bouncer System",
-      "description": "A panel that allows designated users to verify/unverify people.",
+      "description": "An easy to use panel to allow designated `security` users to let in guests. Great for bars or clubs!",
       "thumbnail": "assets/thumbnails/Bouncer System.gif",
       "jinxxyLink": "https://jinxxy.com/valenvrc/BouncerSystem",
       "gumroadLink": "https://store.valenvrc.com/l/BouncerSystem",
       "features": [
-        "User Verification",
-        "Role Management",
-        "Access Control",
-        "Easy Configuration"
+        "Multiple Login Methods",
+        "Respawn on Unverify",
+        "Scanner for easy Verification",
+        "Easy to setup and use"
       ]
     },
     {
@@ -50,24 +54,24 @@
       "jinxxyLink": "https://jinxxy.com/valenvrc/DrinkingRoulette",
       "gumroadLink": "https://store.valenvrc.com/l/DrinkRoulette",
       "features": [
-        "Roulette Game",
-        "Party Mode",
-        "Customizable Rules",
-        "Multiple Players"
+        "Load from External Lists",
+        "Multi Language Support",
+        "Variables Supported",
+        "No Repeat Mode"
       ]
     },
     {
       "id": "floating_tags",
       "name": "Floating Tags",
-      "description": "Add floating images or text that follow players!",
+      "description": "Create cosmetic tags that follow your players around, perfect for names, titles, roles, and more!",
       "thumbnail": "assets/thumbnails/Floating Tags.gif",
       "jinxxyLink": "https://jinxxy.com/valenvrc/FloatingTags",
       "gumroadLink": "https://store.valenvrc.com/l/FloatingTags",
       "features": [
-        "Custom Images/Text",
-        "Player Following",
-        "Easy Customization",
-        "Performance Optimized"
+        "Unlimited amount of Tags",
+        "Image/Text/Particles/Anything as Tag",
+        "Plenty of display options",
+        "Integration with other systems"
       ]
     },
     {
@@ -78,10 +82,11 @@
       "jinxxyLink": "https://jinxxy.com/valenvrc/RoomSystem",
       "gumroadLink": "https://store.valenvrc.com/l/RoomSystem",
       "features": [
-        "Private Rooms",
-        "Utility Options",
-        "Cosmetic Features",
-        "User Management"
+        "Anonymous mode",
+        "Auto Unlock if empty",
+        "Entry/Exit Transitions",
+        "Door Bell",
+        "Invite System"
       ]
     },
     {
@@ -90,7 +95,15 @@
       "description": "Secure your world's systems with this customizable, easy to setup, and powerful keypad asset!",
       "thumbnail": "assets/thumbnails/Security Keypad.gif",
       "jinxxyLink": "https://jinxxy.com/valenvrc/SecurityKeypad",
-      "gumroadLink": "https://store.valenvrc.com/l/SecurityKeypad"
+      "gumroadLink": "https://store.valenvrc.com/l/SecurityKeypad",
+      "features": [
+        "Unlimtied Roles",
+        "Hierarchy System",
+        "Toggles and Events",
+        "Passwords and Whitelists",
+        "Encrpyted and Secure",
+        "Anti-Spoofer System"
+      ]
     },
     {
       "id": "avatar_enforcer",
@@ -119,7 +132,7 @@
     {
       "id": "launch_pads",
       "name": "Launch Pads",
-      "description": "Add launch pads to your world that can launch players in different directions with customizable force and effects!",
+      "description": "Add launch pads to your world that can launch players in different directions with customizable force and trajectory!",
       "thumbnail": "assets/thumbnails/LaunchPad.gif",
       "jinxxyLink": "https://jinxxy.com/valenvrc/LaunchPads",
       "gumroadLink": "https://store.valenvrc.com/l/LaunchPads"
