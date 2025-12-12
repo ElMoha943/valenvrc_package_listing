@@ -3,22 +3,27 @@
 # Stage 1: Build the listing
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
 
-# Set up the workspace like GitHub Actions
+# Set up the workspace
 WORKDIR /github/workspace
 
 # Install git
 RUN apt-get update && apt-get install -y git
 
 # Copy source files
-COPY source.json .
-COPY Website/ Website/
+COPY source.json ./source.json
+COPY Website/ ./Website/
+COPY data/ ./data/
 
-# Clone the package-list-action repo into ci subdirectory
+# Prepare data files for Website
+RUN mkdir -p ./Website/data && \
+    cp data/products.json Website/data/ && \
+    cp data/site-config.json Website/data/ && \
+    cp data/portfolio.json Website/data/
+
+# Clone the package-list-action repo
 RUN git clone https://github.com/vrchat-community/package-list-action.git ci
 
-# Run the build - matching GitHub Actions exactly
-# The build will look for source.json in /github/workspace (where we are)
-# And output to /github/workspace/Website
+# Run the build matching the working GitHub Actions config
 RUN cd ci && \
     chmod +x build.sh && \
     ./build.sh BuildMultiPackageListing \
@@ -30,9 +35,6 @@ FROM nginx:alpine
 
 # Copy built website from builder
 COPY --from=builder /github/workspace/Website /usr/share/nginx/html
-
-# Copy source.json for client-side VPM listing (fallback if build doesn't work)
-COPY source.json /usr/share/nginx/html/source.json
 
 # Copy custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -14,6 +14,10 @@ concurrency:
   group: "production-deploy"
   cancel-in-progress: true
 
+env:
+  listPublishDirectory: Website
+  pathToCi: ci
+
 jobs:
   
   build-and-deploy:
@@ -32,26 +36,23 @@ jobs:
           cp data/site-config.json Website/data/
           cp data/portfolio.json Website/data/
       
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-          
-      - name: Build Docker image
-        run: docker build -t valenvrc-website .
-        
-      - name: Extract built website from Docker
-        run: |
-          # Create container without running it
-          docker create --name temp-container valenvrc-website
-          # Copy built website from container
-          docker cp temp-container:/usr/share/nginx/html ./built-website
-          # Remove container
-          docker rm temp-container
-          
+      - name: Checkout Package Listing Repo
+        uses: actions/checkout@v4
+        with:
+          repository: vrchat-community/package-list-action
+          path: ${{env.pathToCi}}
+          clean: false
+      
+      - name: Build Package Version Listing
+        run: ${{env.pathToCi}}/build.sh BuildMultiPackageListing --root ${{env.pathToCi}} --list-publish-directory $GITHUB_WORKSPACE/${{env.listPublishDirectory}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Deploy to production branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./built-website
+          publish_dir: ./${{env.listPublishDirectory}}
           publish_branch: production
           cname: valenvrc.com
           force_orphan: true
