@@ -35,6 +35,8 @@ jobs:
           cp data/products.json Website/data/
           cp data/site-config.json Website/data/
           cp data/portfolio.json Website/data/
+          # Copy source.json for VPM package listing display
+          cp source.json Website/source.json
       
       - name: Checkout Package Listing Repo
         uses: actions/checkout@v4
