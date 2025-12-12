@@ -30,6 +30,7 @@ jobs:
           # Copy data files to Website
           cp data/products.json Website/data/
           cp data/site-config.json Website/data/
+          cp data/portfolio.json Website/data/
       
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3

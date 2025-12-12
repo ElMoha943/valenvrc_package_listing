@@ -1,0 +1,135 @@
+{
+  "workedFor": [
+    {
+      "id": "brand-1",
+      "name": "NoxVitae",
+      "logo": "assets/brands/noxvitae-logo.png",
+      "projects": [
+        {
+          "id": "project-1",
+          "name": "D4rk L1ght",
+          "image": "assets/projects/d4rk-l1ght.png",
+          "url": "https://vrchat.com/home/world/wrld_80b0dcdc-3103-4a8a-9cca-fd580085e1a9/info"
+        },
+        {
+          "id": "project-2",
+          "name": "Phantom Sands",
+          "image": "assets/projects/phantom-sands.png",
+          "url": "https://vrchat.com/home/world/wrld_85ae3e5b-08c8-4d87-a427-b844fd5cd24a/info"
+        },
+        {
+          "id": "project-3",
+          "name": "Carnival of Souls II",
+          "image": "assets/projects/carnival-of-souls2.png",
+          "url": "https://vrchat.com/home/world/wrld_2ef725d4-1a1f-411f-87b8-d755b9642834/info"
+        }
+      ]
+    },
+    {
+      "id": "brand-2",
+      "name": "EuphoClub",
+      "logo": "assets/brands/euphoclub-logo.png",
+      "projects": [
+        {
+          "id": "project-4",
+          "name": "Eupho Club 2",
+          "image": "assets/eupho-club2.png",
+          "url": "https://vrchat.com/home/world/wrld_6df5f239-69c2-45bc-9040-be9ba2dde30f/info"
+        },
+        {
+          "id": "project-5",
+          "name": "Eupho Club",
+          "image": "assets/projects/eupho-club.png",
+          "url": "https://vrchat.com/home/world/wrld_ab0ea6a3-03be-46f5-97e5-689444466000/info"
+        },
+        {
+          "id": "project-6",
+          "name": "Eupho Spanish",
+          "image": "assets/projects/eupho-spanish.png",
+          "url": "https://vrchat.com/home/world/wrld_8e912aa4-4e8e-4b00-9ba4-f307788e4069/info"
+        }
+      ]
+    }
+  ],
+  "personalProjects": [
+    {
+      "id": "personal-1",
+      "name": "Personal Map Name 1",
+      "image": "assets/personal-1.png",
+      "url": "https://example.com/personal1",
+      "description": "Description of the personal project"
+    },
+    {
+      "id": "personal-2",
+      "name": "Personal Map Name 2",
+      "image": "assets/personal-2.png",
+      "url": "https://example.com/personal2",
+      "description": "Description of the personal project"
+    },
+    {
+      "id": "personal-3",
+      "name": "Personal Map Name 3",
+      "image": "assets/personal-3.png",
+      "url": "https://example.com/personal3",
+      "description": "Description of the personal project"
+    }
+  ],
+  "others": [
+    {
+      "id": "other-1",
+      "image": "assets/projects/la-placita-spanish-club.png",
+      "url": "https://vrchat.com/home/world/wrld_3aded8cb-26f4-4c9c-a8a2-54b89e9272bc/info"
+    },
+    {
+      "id": "other-2",
+      "image": "assets/other-2.png",
+      "url": "https://example.com/other2"
+    },
+    {
+      "id": "other-3",
+      "image": "assets/other-3.png",
+      "url": "https://example.com/other3"
+    },
+    {
+      "id": "other-4",
+      "image": "assets/other-4.png",
+      "url": "https://example.com/other4"
+    },
+    {
+      "id": "other-5",
+      "image": "assets/other-5.png",
+      "url": "https://example.com/other5"
+    },
+    {
+      "id": "other-6",
+      "image": "assets/other-6.png",
+      "url": "https://example.com/other6"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-1",
+      "text": "ValenVRC's work is absolutely outstanding! The attention to detail and creativity is unmatched. Highly recommend working with them!",
+      "author": "Client Name 1",
+      "image": "assets/reviewer-1.png"
+    },
+    {
+      "id": "review-2",
+      "text": "Professional, fast, and incredible quality. The project exceeded all my expectations. Will definitely work together again!",
+      "author": "Client Name 2",
+      "image": "assets/reviewer-2.png"
+    },
+    {
+      "id": "review-3",
+      "text": "Amazing experience from start to finish. Communication was excellent and the final result was exactly what I envisioned.",
+      "author": "Client Name 3",
+      "image": "assets/reviewer-3.png"
+    },
+    {
+      "id": "review-4",
+      "text": "One of the best creators I've worked with. The level of polish and professionalism is top-tier.",
+      "author": "Client Name 4",
+      "image": ""
+    }
+  ]
+}

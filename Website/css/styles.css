@@ -1786,3 +1786,424 @@ h1 {
 .flex-1 {
   flex: 1;
 }
+/* ========== PORTFOLIO PAGE STYLES ========== */
+
+/* Portfolio Hero */
+.portfolio-hero {
+  min-height: 40vh;
+  padding: 8rem 2rem 4rem;
+}
+
+/* Portfolio Sections */
+.portfolio-section {
+  padding: 4rem 2rem;
+  background: var(--primary-bg);
+}
+
+.portfolio-section:nth-child(even) {
+  background: var(--secondary-bg);
+}
+
+/* Worked For Section */
+.worked-for-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.brand-section {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.brand-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: var(--tertiary-bg);
+  padding: 1rem;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-primary);
+}
+
+/* Projects Carousel */
+.projects-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow: visible;
+}
+
+.projects-carousel {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-orange) var(--tertiary-bg);
+  padding: 1rem 0;
+  flex: 1;
+}
+
+.projects-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projects-carousel::-webkit-scrollbar-track {
+  background: var(--tertiary-bg);
+  border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb {
+  background: var(--accent-orange);
+  border-radius: 4px;
+}
+
+.projects-carousel::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-orange-hover);
+}
+
+.project-card {
+  min-width: 300px;
+  flex-shrink: 0;
+  background: var(--tertiary-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: var(--secondary-bg);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Carousel Navigation Buttons */
+.carousel-nav {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--accent-orange);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel-nav:hover {
+  background: var(--accent-orange-hover);
+  transform: scale(1.1);
+}
+
+.carousel-nav:active {
+  transform: scale(0.95);
+}
+
+/* Personal Projects Grid */
+.personal-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.personal-project-card {
+  background: var(--secondary-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.personal-project-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-orange);
+  box-shadow: 0 12px 30px rgba(255, 107, 53, 0.3);
+}
+
+.personal-project-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: var(--tertiary-bg);
+}
+
+.personal-project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.personal-project-card:hover .personal-project-image img {
+  transform: scale(1.1);
+}
+
+.personal-project-info {
+  padding: 2rem;
+}
+
+.personal-project-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.personal-project-info p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Others Grid */
+.others-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.other-project-card {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--tertiary-bg);
+}
+
+.other-project-card:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-orange);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.3);
+}
+
+.other-project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.other-project-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Reviews Section */
+.reviews-section {
+  background: var(--secondary-bg);
+}
+
+.reviews-carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.reviews-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.reviews-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.review-card {
+  min-width: 500px;
+  max-width: 500px;
+  flex-shrink: 0;
+  background: var(--tertiary-bg);
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  border-color: var(--accent-orange);
+  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.2);
+  transform: translateY(-4px);
+}
+
+.review-quote {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--accent-orange);
+  opacity: 0.6;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.review-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-orange);
+}
+
+.review-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Active nav link */
+.nav-link.active {
+  color: var(--accent-orange);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+/* Responsive Design for Portfolio */
+@media (max-width: 1024px) {
+  .brand-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .brand-info {
+    position: relative;
+    top: 0;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .brand-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .personal-projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .review-card {
+    min-width: 400px;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-carousel-container,
+  .reviews-carousel-container {
+    gap: 0.5rem;
+  }
+  
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+  
+  .project-card {
+    min-width: 250px;
+  }
+  
+  .others-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .review-card {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 1.5rem;
+  }
+  
+  .review-text {
+    font-size: 1rem;
+  }
+}
