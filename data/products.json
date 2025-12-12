@@ -94,8 +94,8 @@
       "name": "Security Keypad",
       "description": "Secure your world's systems with this customizable, easy to setup, and powerful keypad asset!",
       "thumbnail": "assets/thumbnails/Security Keypad.gif",
-      "jinxxyLink": "https://jinxxy.com/valenvrc/SecurityKeypad",
-      "gumroadLink": "https://store.valenvrc.com/l/SecurityKeypad",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/KeyPad",
+      "gumroadLink": "https://valenvrc.gumroad.com/l/KeyPad",
       "features": [
         "Unlimtied Roles",
         "Hierarchy System",
@@ -118,15 +118,15 @@
       "name": "Bonk Stick",
       "description": "Have fun bonking your friends with this interactive bonk stick!",
       "thumbnail": "assets/thumbnails/Bonk Stick.gif",
-      "jinxxyLink": "https://jinxxy.com/valenvrc/BonkStick",
-      "gumroadLink": "https://store.valenvrc.com/l/BonkStick"
+      "jinxxyLink": "https://jinxxy.com/valenvrc/Bonk",
+      "gumroadLink": "https://valenvrc.gumroad.com/l/Bonk"
     },
     {
       "id": "counter",
       "name": "Counter",
       "description": "A simple and customizable counter system for your VRChat world.",
       "thumbnail": "assets/thumbnails/Counter.gif",
-      "jinxxyLink": "https://jinxxy.com/valenvrc/Counter",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/counter",
       "gumroadLink": "https://store.valenvrc.com/l/Counter"
     },
     {
@@ -134,7 +134,7 @@
       "name": "Launch Pads",
       "description": "Add launch pads to your world that can launch players in different directions with customizable force and trajectory!",
       "thumbnail": "assets/thumbnails/LaunchPad.gif",
-      "jinxxyLink": "https://jinxxy.com/valenvrc/LaunchPads",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/Launchpads",
       "gumroadLink": "https://store.valenvrc.com/l/LaunchPads"
     },
     {
