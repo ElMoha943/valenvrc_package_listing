@@ -18,7 +18,8 @@ COPY data/ ./data/
 RUN mkdir -p ./Website/data && \
     cp data/products.json Website/data/ && \
     cp data/site-config.json Website/data/ && \
-    cp data/portfolio.json Website/data/
+    cp data/portfolio.json Website/data/ && \
+    cp source.json Website/source.json
 
 # Clone the package-list-action repo
 RUN git clone https://github.com/vrchat-community/package-list-action.git ci
