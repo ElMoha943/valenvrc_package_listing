@@ -1,20 +1,17 @@
-name: Build Repo Listing
+name: Build and Deploy Website
 
 on: 
   workflow_dispatch:
   push:
     branches: main
-    paths: source.json
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+# Sets permissions of the GITHUB_TOKEN to allow pushing to branches
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
   
 # Allow one concurrent deployment
 concurrency:
-  group: "pages"
+  group: "production-deploy"
   cancel-in-progress: true
   
 env:
@@ -23,11 +20,8 @@ env:
 
 jobs:
   
-  build-listing:
-    name: build-listing
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
+    name: build-and-deploy
     runs-on: ubuntu-latest
     steps:
       
@@ -50,15 +44,16 @@ jobs:
         run: ${{env.pathToCi}}/build.cmd BuildMultiPackageListing --root ${{env.pathToCi}} --list-publish-directory $GITHUB_WORKSPACE/${{env.listPublishDirectory}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
- 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ${{env.listPublishDirectory}}
+
+      - name: Copy data files to Website
+        run: |
+          cp -r data/* Website/data/
+          cp source.json Website/
           
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Deploy to production branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Website
+          publish_branch: production
+          force_orphan: true

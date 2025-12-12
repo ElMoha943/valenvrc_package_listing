@@ -1,0 +1,136 @@
+{
+  "products": [
+    {
+      "id": "admin_tablet",
+      "name": "Admin Tablet",
+      "description": "Fully customizable admin tablet for your VRChat World completely modular for easy setup/modification. This is the only asset you will ever need for managing your world and events!",
+      "thumbnail": "assets/thumbnails/Admin Tablet.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/Admin_Tablet",
+      "gumroadLink": "https://store.valenvrc.com/l/AdminTablet",
+      "features": [
+        "Modular & Customizable",
+        "Event Management Tools",
+        "User Controls",
+        "Easy Setup"
+      ]
+    },
+    {
+      "id": "alcohol_system",
+      "name": "Alcohol System",
+      "description": "Create custom drinks that get you and your friends drunk! Don't drink to much or you may need to puke!",
+      "thumbnail": "assets/thumbnails/Alcohol System.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/AlcoholSystem",
+      "gumroadLink": "https://store.valenvrc.com/l/AlcoholSystem",
+      "features": [
+        "Custom Drinks",
+        "Drunk Effects",
+        "Puke Mechanic",
+        "Multiplayer Support"
+      ]
+    },
+    {
+      "id": "bouncer_system",
+      "name": "Bouncer System",
+      "description": "A panel that allows designated users to verify/unverify people.",
+      "thumbnail": "assets/thumbnails/Bouncer System.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/BouncerSystem",
+      "gumroadLink": "https://store.valenvrc.com/l/BouncerSystem",
+      "features": [
+        "User Verification",
+        "Role Management",
+        "Access Control",
+        "Easy Configuration"
+      ]
+    },
+    {
+      "id": "drinks_roulette",
+      "name": "Drinks Roullette",
+      "description": "Powerful roulette game, to spice up your nights!",
+      "thumbnail": "assets/thumbnails/Drinks Roullette.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/DrinkingRoulette",
+      "gumroadLink": "https://store.valenvrc.com/l/DrinkRoulette",
+      "features": [
+        "Roulette Game",
+        "Party Mode",
+        "Customizable Rules",
+        "Multiple Players"
+      ]
+    },
+    {
+      "id": "floating_tags",
+      "name": "Floating Tags",
+      "description": "Add floating images or text that follow players!",
+      "thumbnail": "assets/thumbnails/Floating Tags.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/FloatingTags",
+      "gumroadLink": "https://store.valenvrc.com/l/FloatingTags",
+      "features": [
+        "Custom Images/Text",
+        "Player Following",
+        "Easy Customization",
+        "Performance Optimized"
+      ]
+    },
+    {
+      "id": "room_system",
+      "name": "Room System",
+      "description": "Create private rooms for your world with lots of utility and cosmetic options!",
+      "thumbnail": "assets/thumbnails/Room System.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/RoomSystem",
+      "gumroadLink": "https://store.valenvrc.com/l/RoomSystem",
+      "features": [
+        "Private Rooms",
+        "Utility Options",
+        "Cosmetic Features",
+        "User Management"
+      ]
+    },
+    {
+      "id": "security_keypad",
+      "name": "Security Keypad",
+      "description": "Secure your world's systems with this customizable, easy to setup, and powerful keypad asset!",
+      "thumbnail": "assets/thumbnails/Security Keypad.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/SecurityKeypad",
+      "gumroadLink": "https://store.valenvrc.com/l/SecurityKeypad"
+    },
+    {
+      "id": "avatar_enforcer",
+      "name": "Avatar Enforcer",
+      "description": "Easily manage which avatars are allowed in your world with this powerful avatar enforcer system!",
+      "thumbnail": "assets/thumbnails/Avatar Enforcer.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/AvatarEnforcer",
+      "gumroadLink": "https://store.valenvrc.com/l/AvatarEnforcer"
+    },
+    {
+      "id": "bonk_stick",
+      "name": "Bonk Stick",
+      "description": "Have fun bonking your friends with this interactive bonk stick!",
+      "thumbnail": "assets/thumbnails/Bonk Stick.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/BonkStick",
+      "gumroadLink": "https://store.valenvrc.com/l/BonkStick"
+    },
+    {
+      "id": "counter",
+      "name": "Counter",
+      "description": "A simple and customizable counter system for your VRChat world.",
+      "thumbnail": "assets/thumbnails/Counter.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/Counter",
+      "gumroadLink": "https://store.valenvrc.com/l/Counter"
+    },
+    {
+      "id": "launch_pads",
+      "name": "Launch Pads",
+      "description": "Add launch pads to your world that can launch players in different directions with customizable force and effects!",
+      "thumbnail": "assets/thumbnails/LaunchPad.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/LaunchPads",
+      "gumroadLink": "https://store.valenvrc.com/l/LaunchPads"
+    },
+    {
+      "id": "service_bell",
+      "name": "Service Bell",
+      "description": "A customizable service bell that players can ring to get attention of the staff.",
+      "thumbnail": "assets/thumbnails/Service Bell.gif",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/ServiceBell",
+      "gumroadLink": "https://store.valenvrc.com/l/ServiceBell"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+services:
+  valenvrc-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: valenvrc-site
+    ports:
+      - "8080:80"
+    volumes:
+      # Mount data folder for live editing
+      - ./data:/usr/share/nginx/html/data:ro
+    restart: unless-stopped
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
