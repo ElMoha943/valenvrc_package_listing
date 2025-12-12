@@ -408,5 +408,29 @@ const setTheme = () => {
     initProducts();
     initCommissions();
     renderVPMPackages();
+    initSmoothScroll();
   });
+  
+  // Smooth scroll functionality
+  const initSmoothScroll = () => {
+    // Handle dropdown navigation items
+    document.querySelectorAll('.scroll-to-section, .footer-links a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const targetId = href.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close dropdown if open
+            const dropdown = link.closest('.nav-dropdown');
+            if (dropdown) {
+              dropdown.classList.remove('active');
+            }
+          }
+        }
+      });
+    });
+  };
 })();
