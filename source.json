@@ -40,6 +40,7 @@
         {
             "name" : "com.valenvrc.whitelistedtp",
             "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/v1.2.0/valenvrc.whitelistedtp-v1.2.0.zip",
                 "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.1.0/com.valenvrc.whitelistedtp.zip",
                 "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.0.1/com.valenvrc.whitelistedtp.zip"
             ]
@@ -51,6 +52,18 @@
                 "https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/1.1.2/com.valenvrc.russian_roullette.zip",
                 "https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/1.1.0/com.valenvrc.russian_roullette.zip"
             ]
-        }
+        },
+        {
+            "name" : "com.valenvrc.editortools",
+            "releases" : [
+                "https://github.com/ElMoha943/VEditorTools/releases/download/v1.0.0/valenvrc.EditorTools-v1.0.0.zip"
+            ]
+        },
+        {
+            "name" : "com.valenvrc.MPBEditor",
+            "releases" : [
+                "https://github.com/ElMoha943/VMPBUE/releases/download/v1.0.0/valenvrc.MPBEditor-v1.0.0.zip"
+            ]
+        },
     ]
 }
