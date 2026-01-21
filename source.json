@@ -18,7 +18,7 @@
         {
             "name" : "com.valenvrc.common",
             "releases" : [
-                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.4.0-beta.1/valenvrc.common-v2.4.0-beta.1.zip",
+                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.4.0/valenvrc.common-v2.4.0.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/2.3.0/com.valenvrc.common.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/2.2.2/com.valenvrc.common.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/2.2.1/com.valenvrc.common.zip",
