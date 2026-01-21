@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "Val's Creations",
+    "tagline": "VRChat World Creator & Custom Systems Developer",
+    "welcomeMessage": "Welcome to Val's Creations - Your source for premium VRChat content and custom development"
+  },
+  "links": {
+    "stores": {
+      "jinxxy": "https://jinxxy.com/valenvrc",
+      "gumroad": "https://store.valenvrc.com/"
+    },
+    "discord": "valenvrc.com/discord",
+    "docs": "https://docs.valenvrc.com",
+    "tos": "https://docs.valenvrc.com/tos#commission-terms-and-conditions"
+  },
+  "social": {
+    "twitter": "https://x.com/ValenVRC943",
+    "instagram": "https://www.instagram.com/valenn.vrc/",
+    "youtube": "https://www.youtube.com/@valenvrc",
+    "vrchat": "https://vrc.group/VVRC.0121",
+    "discord": "https://discord.gg/6AcpahXKQu"
+  },
+  "commissions": {
+    "title": "Commission Services",
+    "description": "I'm a Developer and VRChat mapmaker with 4+ years of experience specializing in the creation of custom scripts and systems, always with performance in mind. I can help you bring your VRChat world ideas to life with custom features tailored to your needs.",
+    "services": [
+      "World Optimization",
+      "Light Baking",
+      "Udon Programming",
+      "AudioLink SetUP",
+      "DMX/VRSL SetUp",
+      "Design Consultation"
+    ],
+    "contactText": "Interested in working together? Join my Discord server to discuss your project!",
+    "contactButton": "Contact on Discord"
+  }
+}

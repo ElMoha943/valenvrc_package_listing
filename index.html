@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ValenVRC - VRChat Content Creator | Custom Worlds, Scripts & Assets</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="ValenVRC - Professional VRChat content creator offering custom worlds, Udon scripts, prefabs, and commission services. Browse our VPM packages and premium assets.">
+  <meta name="keywords" content="VRChat, VRC, Unity, Udon, VRChat Worlds, VRChat Prefabs, VRChat Assets, VPM Packages, Custom Scripts, VRChat Creator, ValenVRC">
+  <meta name="author" content="ValenVRC">
+  <meta name="theme-color" content="#FF6B35">
+  <link rel="canonical" href="https://valenvrc.com/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valenvrc.com/">
+  <meta property="og:title" content="ValenVRC - VRChat Content Creator">
+  <meta property="og:description" content="Professional VRChat content creator offering custom worlds, Udon scripts, prefabs, and commission services. Browse our VPM packages and premium assets.">
+  <!-- <meta property="og:image" content="https://valenvrc.com/assets/og-image.jpg"> -->
+  <meta property="og:site_name" content="ValenVRC">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://valenvrc.com/">
+  <meta property="twitter:title" content="ValenVRC - VRChat Content Creator">
+  <meta property="twitter:description" content="Professional VRChat content creator offering custom worlds, Udon scripts, prefabs, and commission services.">
+  <!-- <meta property="twitter:image" content="https://valenvrc.com/assets/og-image.jpg"> -->
+  <meta property="twitter:site" content="@ValenVRC943">
+  <meta property="twitter:creator" content="@ValenVRC943">
+  
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <h1>ValenVRC</h1>
+      </div>
+      <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+        ☰
+      </button>
+      <nav class="main-nav">
+        <div class="nav-dropdown">
+          <a href="/" class="nav-link nav-store-dropdown">Home ▾</a>
+          <div class="nav-dropdown-content">
+            <a href="#products" class="dropdown-item scroll-to-section">
+              <span>Products</span>
+            </a>
+            <a href="#vpm-listing" class="dropdown-item scroll-to-section">
+              <span>VPM Listing</span>
+            </a>
+            <a href="#commissions" class="dropdown-item scroll-to-section">
+              <span>Commissions</span>
+            </a>
+          </div>
+        </div>
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="https://docs.valenvrc.com" target="_blank" class="nav-link">Docs</a>
+        <div class="nav-dropdown">
+          <button class="nav-link nav-store-dropdown">Stores ▾</button>
+          <div class="nav-dropdown-content">
+            <a href="https://jinxxy.com/valenvrc" target="_blank" class="dropdown-item">
+              <img src="assets/JinxxyIcon.webp" alt="Jinxxy">
+              <span>Jinxxy</span>
+            </a>
+            <a href="https://store.valenvrc.com/" target="_blank" class="dropdown-item">
+              <img src="assets/Gumroad_Icon.webp" alt="Gumroad">
+              <span>Gumroad</span>
+            </a>
+          </div>
+        </div>
+        <a href="discord.html" class="nav-link nav-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">Val's Creations</h1>
+      <p class="hero-subtitle">Your source for premium VRChat content and custom development</p>
+      <div class="hero-buttons">
+        <a href="#products" class="hero-btn primary">View Products</a>
+        <a href="#vpm-listing" class="hero-btn secondary">Free Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Showcase Section -->
+  <section id="products" class="products-section">
+    <div class="section-container">
+      <h2 class="section-title">Premium Assets & Tools</h2>
+      <div class="products-grid-container">
+        <div class="products-thumbnails">
+          <div id="productThumbnails" class="thumbnail-grid">
+            <!-- Products loaded dynamically -->
+          </div>
+        </div>
+        <div class="product-details-container">
+          <div id="productDetails" class="product-details">
+            <div class="product-placeholder">
+              <p>Select a product to view details</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VPM Listing Section -->
+  <section id="vpm-listing" class="vpm-section">
+    <div class="section-container">
+      <h2 class="section-title">Free Packages Listing</h2>
+      
+      <!-- Add to VCC Block -->
+      <div class="vpm-add-block">
+        <div class="vpm-url-container">
+          <input type="text" id="vpmUrlField" class="vpm-url-input" readonly value="https://valenvrc.com/index.json" aria-label="VPM Repository URL">
+          <button id="vpmCopyBtn" class="vpm-btn vpm-btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M8 2C6.89543 2 6 2.89543 6 4V14C6 15.1046 6.89543 16 8 16H14C15.1046 16 16 15.1046 16 14V4C16 2.89543 15.1046 2 14 2H8ZM7 4C7 3.44772 7.44772 3 8 3H14C14.5523 3 15 3.44772 15 4V14C15 14.5523 14.5523 15 14 15H8C7.44772 15 7 14.5523 7 14V4ZM4 6.00001C4 5.25973 4.4022 4.61339 5 4.26758V14.5C5 15.8807 6.11929 17 7.5 17H13.7324C13.3866 17.5978 12.7403 18 12 18H7.5C5.567 18 4 16.433 4 14.5V6.00001Z"/>
+            </svg>
+            Copy
+          </button>
+          <button id="vpmAddBtn" class="vpm-btn vpm-btn-primary">Add to VCC</button>
+          <button id="vpmHelpBtn" class="vpm-btn vpm-btn-icon" title="How to add">
+            <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10ZM10.75 6.75C10.75 6.33579 10.4142 6 10 6C9.58579 6 9.25 6.33579 9.25 6.75C9.25 7.16421 9.58579 7.5 10 7.5C10.4142 7.5 10.75 7.16421 10.75 6.75ZM9.5 9C9.5 8.72386 9.72386 8.5 10 8.5C10.2761 8.5 10.5 8.72386 10.5 9V13.5C10.5 13.7761 10.2761 14 10 14C9.72386 14 9.5 13.7761 9.5 13.5V9Z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Help Modal -->
+      <div id="vpmHelpModal" class="vpm-modal" style="display: none;">
+        <div class="vpm-modal-overlay" id="vpmModalOverlay"></div>
+        <div class="vpm-modal-content">
+          <div class="vpm-modal-header">
+            <h3>How to Add This Listing to Your VCC</h3>
+            <button class="vpm-modal-close" id="vpmModalClose">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M4.08859 4.21569L4.14645 4.14645C4.32001 3.97288 4.58944 3.9536 4.78431 4.08859L4.85355 4.14645L10 9.293L15.1464 4.14645C15.32 3.97288 15.5894 3.9536 15.7843 4.08859L15.8536 4.14645C16.0271 4.32001 16.0464 4.58944 15.9114 4.78431L15.8536 4.85355L10.707 10L15.8536 15.1464C16.0271 15.32 16.0464 15.5894 15.9114 15.7843L15.8536 15.8536C15.68 16.0271 15.4106 16.0464 15.2157 15.9114L15.1464 15.8536L10 10.707L4.85355 15.8536C4.67999 16.0271 4.41056 16.0464 4.21569 15.9114L4.14645 15.8536C3.97288 15.68 3.9536 15.4106 4.08859 15.2157L4.14645 15.1464L9.293 10L4.14645 4.85355C3.97288 4.67999 3.9536 4.41056 4.08859 4.21569L4.14645 4.14645L4.08859 4.21569Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="vpm-modal-body">
+            <p>To add this listing to your VCC (VRChat Creator Companion):</p>
+            <ol class="vpm-steps">
+              <li>Open your VCC and go to <strong>Settings</strong></li>
+              <li>Click the <strong>Packages</strong> tab</li>
+              <li>Click <strong>Add Repository</strong></li>
+              <li>Paste the URL displayed above</li>
+              <li>Click <strong>Add</strong></li>
+              <li>Review the repository info and click <strong>I Understand</strong></li>
+              <li>Go to any project to see packages from this listing</li>
+            </ol>
+            <div class="vpm-learn-more">
+              <p>Learn more about <a href="https://vcc.docs.vrchat.com" target="_blank">Package Listings</a> in the VCC docs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="vpm-search-container">
+        <input type="text" id="vpmSearchInput" class="vpm-search-input" placeholder="Search packages..." aria-label="Search VPM packages">
+      </div>
+
+      <!-- Packages Grid -->
+      <div class="vpm-packages-container">
+        <div class="vpm-packages-grid" id="vpmPackagesGrid">
+          <!-- Packages will be dynamically loaded here -->
+        </div>
+      </div>
+
+      <!-- Package Info Modal -->
+      <div id="vpmPackageModal" class="vpm-modal" style="display: none;">
+        <div class="vpm-modal-overlay" id="vpmPackageModalOverlay"></div>
+        <div class="vpm-modal-content vpm-modal-large">
+          <div class="vpm-modal-header">
+            <div>
+              <h3 id="vpmPackageModalName">Package Name</h3>
+              <p class="vpm-modal-subtitle">
+                <span id="vpmPackageModalId">com.package.id</span>
+                <span class="vpm-divider">•</span>
+                <span id="vpmPackageModalVersion">v1.0.0</span>
+              </p>
+            </div>
+            <button class="vpm-modal-close" id="vpmPackageModalClose">
+              <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <path d="M4.08859 4.21569L4.14645 4.14645C4.32001 3.97288 4.58944 3.9536 4.78431 4.08859L4.85355 4.14645L10 9.293L15.1464 4.14645C15.32 3.97288 15.5894 3.9536 15.7843 4.08859L15.8536 4.14645C16.0271 4.32001 16.0464 4.58944 15.9114 4.78431L15.8536 4.85355L10.707 10L15.8536 15.1464C16.0271 15.32 16.0464 15.5894 15.9114 15.7843L15.8536 15.8536C15.68 16.0271 15.4106 16.0464 15.2157 15.9114L15.1464 15.8536L10 10.707L4.85355 15.8536C4.67999 16.0271 4.41056 16.0464 4.21569 15.9114L4.14645 15.8536C3.97288 15.68 3.9536 15.4106 4.08859 15.2157L4.14645 15.1464L9.293 10L4.14645 4.85355C3.97288 4.67999 3.9536 4.41056 4.08859 4.21569L4.14645 4.14645L4.08859 4.21569Z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="vpm-modal-body">
+            <div class="vpm-modal-section">
+              <h4>Description</h4>
+              <p id="vpmPackageModalDescription">Package description</p>
+            </div>
+            <div class="vpm-modal-section">
+              <h4>Author</h4>
+              <p><a href="#" target="_blank" id="vpmPackageModalAuthor">Author Name</a></p>
+            </div>
+            <div class="vpm-modal-section" id="vpmPackageModalDepsSection">
+              <h4>Dependencies</h4>
+              <ul id="vpmPackageModalDependencies"></ul>
+            </div>
+            <div class="vpm-modal-section" id="vpmPackageModalKeywordsSection">
+              <h4>Keywords</h4>
+              <div class="vpm-modal-keywords" id="vpmPackageModalKeywords"></div>
+            </div>
+            <div class="vpm-modal-section" id="vpmPackageModalLicenseSection">
+              <h4>License</h4>
+              <p><a href="#" target="_blank" id="vpmPackageModalLicense">License</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commissions Section -->
+  <section id="commissions" class="commissions-section">
+    <div class="section-container">
+      <h2 class="section-title">Commission Services</h2>
+      <div class="commissions-content">
+        <div class="commissions-description">
+          <p class="commissions-intro" id="commissionsIntro">
+            I'm a Developer and VRChat mapmaker with 4+ years of experience specializing in the creation of custom scripts and systems, always with performance in mind. I can help you bring your VRChat world ideas to life with custom features tailored to your needs.
+          </p>
+          <div class="services-grid" id="servicesGrid">
+            <!-- Services loaded dynamically -->
+          </div>
+          <p class="contact-text" id="contactText">
+            Interested in working together? Join my Discord server to discuss your project!
+          </p>
+          <div class="commissions-buttons">
+            <a href="discord.html" class="commissions-btn primary">Contact on Discord</a>
+            <a href="https://docs.valenvrc.com/tos" target="_blank" class="commissions-btn secondary">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Sitemap</h3>
+        <ul class="footer-links">
+          <li><a href="#products">Products</a></li>
+          <li><a href="#vpm-listing">VPM Listing</a></li>
+          <li><a href="#commissions">Commissions</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="https://docs.valenvrc.com" target="_blank">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Stores</h3>
+        <ul class="footer-links">
+          <li><a href="https://jinxxy.com/valenvrc" target="_blank">Jinxxy Store</a></li>
+          <li><a href="https://store.valenvrc.com/" target="_blank">Gumroad Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Social Media</h3>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/6AcpahXKQu" target="_blank">Discord Server</a></li>
+          <li><a href="https://x.com/ValenVRC943" target="_blank">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/valenn.vrc/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@valenvrc" target="_blank">YouTube</a></li>
+          <li><a href="https://vrc.group/VVRC.0121" target="_blank">VRChat Group</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul class="footer-links">
+          <li><a href="https://docs.valenvrc.com/tos" target="_blank">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ValenVRC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
