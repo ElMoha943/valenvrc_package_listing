@@ -409,7 +409,59 @@ const setTheme = () => {
     initCommissions();
     renderVPMPackages();
     initSmoothScroll();
+    initMobileMenu();
   });
+  
+  // Mobile menu toggle
+  const initMobileMenu = () => {
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (mobileMenuToggle && mainNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('mobile-menu-open');
+        
+        // Update toggle button appearance
+        const isOpen = mainNav.classList.contains('mobile-menu-open');
+        mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
+      });
+      
+      // Handle dropdown clicks on mobile
+      mainNav.querySelectorAll('.nav-store-dropdown').forEach(dropdownBtn => {
+        dropdownBtn.addEventListener('click', (e) => {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const dropdown = dropdownBtn.closest('.nav-dropdown');
+            dropdown.classList.toggle('dropdown-open');
+          }
+        });
+      });
+      
+      // Close menu when clicking a link (except dropdown toggles)
+      mainNav.querySelectorAll('.nav-link:not(.nav-store-dropdown)').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            mainNav.classList.remove('mobile-menu-open');
+            mobileMenuToggle.textContent = '☰';
+          }
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            !e.target.closest('.main-nav') && 
+            !e.target.closest('.mobile-menu-toggle')) {
+          mainNav.classList.remove('mobile-menu-open');
+          mobileMenuToggle.textContent = '☰';
+          // Close all dropdowns
+          mainNav.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+            dropdown.classList.remove('dropdown-open');
+          });
+        }
+      });
+    }
+  };
   
   // Smooth scroll functionality
   const initSmoothScroll = () => {

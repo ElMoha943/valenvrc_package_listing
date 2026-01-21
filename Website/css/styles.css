@@ -25,12 +25,40 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: var(--primary-bg);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text-primary);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Prevent text selection on touch devices for better UX */
+button, .nav-link, .product-thumbnail, .vpm-package-card {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improve touch scrolling on mobile */
+.thumbnail-grid,
+.projects-carousel,
+.reviews-carousel,
+#packageGrid {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 
 /* ========== HEADER ========== */
@@ -81,6 +109,27 @@ body {
 
 .nav-link:hover {
   color: var(--accent-orange);
+  background: rgba(255, 107, 53, 0.1);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--accent-orange);
+  color: var(--accent-orange);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle:hover {
   background: rgba(255, 107, 53, 0.1);
 }
 
@@ -169,6 +218,7 @@ body {
   background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .hero-section::before {
@@ -178,8 +228,9 @@ body {
   height: 500px;
   background: radial-gradient(circle, rgba(255, 107, 53, 0.15) 0%, transparent 70%);
   top: -100px;
-  right: -100px;
+  right: -200px;
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .hero-content {
@@ -250,6 +301,8 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 2rem 2rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -1865,6 +1918,7 @@ h1 {
   scrollbar-color: var(--accent-orange) var(--tertiary-bg);
   padding: 1rem 0;
   flex: 1;
+  scroll-snap-type: x proximity;
 }
 
 .projects-carousel::-webkit-scrollbar {
@@ -1896,6 +1950,7 @@ h1 {
   color: var(--text-primary);
   transition: all 0.3s ease;
   cursor: pointer;
+  scroll-snap-align: start;
 }
 
 .project-card:hover {
@@ -2154,8 +2209,61 @@ h1 {
   background: rgba(255, 107, 53, 0.1);
 }
 
-/* Responsive Design for Portfolio */
+/* ========== RESPONSIVE DESIGN ========== */
+
+/* Tablets and Small Desktops */
 @media (max-width: 1024px) {
+  .header-container {
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+  
+  .main-nav {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .section-container {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .products-grid-container {
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .vpm-packages-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+  
+  /* Portfolio Page */
   .brand-section {
     grid-template-columns: 1fr;
   }
@@ -2182,20 +2290,314 @@ h1 {
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 768px) {
-  .projects-carousel-container,
-  .reviews-carousel-container {
+  /* Header */
+  .header-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .logo {
+    flex: 1;
+  }
+  
+  .logo h1 {
+    font-size: 1.3rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .main-nav.mobile-menu-open {
+    display: flex;
+  }
+  
+  .nav-link {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-dropdown {
+    width: 100%;
+  }
+  
+  .nav-link.nav-store-dropdown {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-dropdown-content {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    display: none !important; /* Override hover on mobile */
+  }
+  
+  .nav-dropdown.dropdown-open .nav-dropdown-content {
+    display: block !important;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .hero-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Section Container */
+  .section-container {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Products Section */
+  .products-grid-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .products-thumbnails {
+    padding: 0.75rem;
+  }
+  
+  .thumbnail-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    max-height: none;
+  }
+  
+  .product-details-container {
+    padding: 1.5rem;
+  }
+  
+  .product-name {
+    font-size: 1.6rem;
+  }
+  
+  .product-description {
+    font-size: 1rem;
+  }
+  
+  .product-features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .product-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .product-btn {
+    width: 100%;
+  }
+  
+  /* VPM Section */
+  .vpm-content {
+    padding: 0 1rem;
+  }
+  
+  .vpm-search-bar {
+    width: 100%;
+  }
+  
+  .vpm-search-input {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 0.75rem;
+  }
+  
+  .vpm-packages-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .vpm-package-card {
+    padding: 1.25rem;
+  }
+  
+  .vpm-package-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .vpm-package-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .vpm-package-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .vpm-package-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .vpm-modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+  
+  .vpm-modal-header,
+  .vpm-modal-body {
+    padding: 1.5rem;
+  }
+  
+  .vpm-modal-header h3 {
+    font-size: 1.3rem;
+  }
+  
+  /* Commissions Section */
+  .commissions-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contact-text {
+    font-size: 1.1rem;
+  }
+  
+  .commissions-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .commissions-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .footer-section {
+    text-align: center;
+  }
+  
+  .footer-links a:hover {
+    padding-left: 0;
+  }
+  
+  /* Portfolio Page */
+  .worked-for-content {
+    gap: 2rem;
+  }
+  
+  .brand-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .brand-info {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+    padding: 0.5rem;
+  }
+  
+  .brand-name {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  
+  .projects-carousel-container {
     gap: 0.5rem;
   }
   
   .carousel-nav {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+    display: none; /* Hide on mobile, use swipe instead */
+  }
+  
+  .projects-carousel {
+    gap: 1rem;
+    padding: 0.5rem 0;
+    width: 100%;
   }
   
   .project-card {
-    min-width: 250px;
+    min-width: 85%;
+    max-width: 85%;
+  }
+  
+  .project-image {
+    height: 180px;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-info h4 {
+    font-size: 1rem;
+  }
+  
+  .reviews-carousel-container {
+    gap: 0.5rem;
+  }
+  
+  .reviews-carousel .carousel-nav {
+    display: none; /* Hide on mobile */
   }
   
   .others-grid {
@@ -2211,5 +2613,226 @@ h1 {
   
   .review-text {
     font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  /* Ensure no horizontal overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .section-container,
+  .header-container,
+  .footer-container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  
+  /* Ensure minimum text sizes for readability */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Header */
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+  
+  .main-nav {
+    width: 100%;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    min-height: 50vh;
+    padding: 2rem 0.75rem;
+    width: 100%;
+  }
+  
+  .hero-content {
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+  
+  .hero-title {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    word-break: break-word;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Section Titles */
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-container {
+    padding: 1.5rem 0.75rem;
+  }
+  
+  /* Products Section */
+  .thumbnail-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .product-name {
+    font-size: 1.4rem;
+  }
+  
+  .product-description {
+    font-size: 0.95rem;
+  }
+  
+  .product-features-title {
+    font-size: 1.1rem;
+  }
+  
+  .product-feature-name {
+    font-size: 0.9rem;
+  }
+  
+  /* VPM Section */
+  .vpm-package-name {
+    font-size: 1.1rem;
+  }
+  
+  .vpm-package-id {
+    font-size: 0.75rem;
+    word-break: break-all;
+  }
+  
+  .vpm-package-description {
+    font-size: 0.9rem;
+  }
+  
+  .vpm-modal-content {
+    width: 98%;
+  }
+  
+  .vpm-modal-header,
+  .vpm-modal-body {
+    padding: 1rem;
+  }
+  
+  .vpm-modal-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .vpm-modal-section h4 {
+    font-size: 1rem;
+  }
+  
+  /* Commissions */
+  .commissions-intro {
+    font-size: 1rem;
+  }
+  
+  .service-name {
+    font-size: 1rem;
+  }
+  
+  .contact-text {
+    font-size: 1rem;
+  }
+  
+  /* Portfolio Carousel */
+  .project-card {
+    min-width: 200px;
+  }
+  
+  .review-card {
+    min-width: 260px;
+    max-width: 260px;
+    padding: 1.25rem;
+  }
+  
+  .review-text {
+    font-size: 0.95rem;
+  }
+  
+  /* Portfolio Carousel */
+  .worked-for-content {
+    gap: 1.5rem;
+  }
+  
+  .brand-info {
+    padding: 0.75rem;
+  }
+  
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+    padding: 0.25rem;
+  }
+  
+  .brand-name {
+    font-size: 1rem;
+  }
+  
+  .projects-carousel {
+    gap: 0.75rem;
+    padding: 0.25rem 0;
+  }
+  
+  .project-card {
+    min-width: 90%;
+    max-width: 90%;
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+  
+  .project-info {
+    padding: 0.75rem;
+  }
+  
+  .project-info h4 {
+    font-size: 0.95rem;
+  }
+  
+  .others-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  
+  /* Buttons */
+  .hero-btn,
+  .commissions-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .product-btn {
+    font-size: 0.95rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  /* Footer */
+  .footer-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+  
+  .footer-bottom {
+    font-size: 0.85rem;
+    padding: 1rem 0;
   }
 }
