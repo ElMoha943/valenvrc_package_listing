@@ -64,6 +64,7 @@
         {
             "name" : "com.valenvrc.MPBEditor",
             "releases" : [
+                "https://github.com/ElMoha943/VMPBUE/releases/download/v1.1.0/valenvrc.MPBEditor-v1.1.0.zip",
                 "https://github.com/ElMoha943/VMPBUE/releases/download/v1.0.0/valenvrc.MPBEditor-v1.0.0.zip"
             ]
         }
