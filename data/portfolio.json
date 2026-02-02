@@ -1,0 +1,179 @@
+{
+  "workedFor": [
+    {
+      "id": "brand-1",
+      "name": "NoxVitae",
+      "logo": "assets/brands/nox-vitae-logo.webp",
+      "projects": [
+        {
+          "id": "project-11",
+          "name": "D4rk L1ght",
+          "image": "assets/projects/d4rk-l1ght.webp",
+          "url": "https://vrchat.com/home/world/wrld_80b0dcdc-3103-4a8a-9cca-fd580085e1a9/info"
+        },
+        {
+          "id": "project-12",
+          "name": "Phantom Sands",
+          "image": "assets/projects/phantom-sands.webp",
+          "url": "https://vrchat.com/home/world/wrld_85ae3e5b-08c8-4d87-a427-b844fd5cd24a/info"
+        },
+        {
+          "id": "project-13",
+          "name": "Carnival of Souls II",
+          "image": "assets/projects/carnival-of-souls2.webp",
+          "url": "https://vrchat.com/home/world/wrld_2ef725d4-1a1f-411f-87b8-d755b9642834/info"
+        }
+      ]
+    },
+    {
+      "id": "brand-2",
+      "name": "EuphoClub",
+      "logo": "assets/brands/eupho-club-logo.webp",
+      "projects": [
+        {
+          "id": "project-21",
+          "name": "Eupho Club 2",
+          "image": "assets/projects/eupho-club2.webp",
+          "url": "https://vrchat.com/home/world/wrld_6df5f239-69c2-45bc-9040-be9ba2dde30f/info"
+        },
+        {
+          "id": "project-22",
+          "name": "Eupho Club",
+          "image": "assets/projects/eupho-club.webp",
+          "url": "https://vrchat.com/home/world/wrld_ab0ea6a3-03be-46f5-97e5-689444466000/info"
+        },
+        {
+          "id": "project-23",
+          "name": "Eupho Spanish",
+          "image": "assets/projects/eupho-spanish.webp",
+          "url": "https://vrchat.com/home/world/wrld_8e912aa4-4e8e-4b00-9ba4-f307788e4069/info"
+        }
+      ]
+    },
+    {
+      "id": "brand-3",
+      "name": "El Pecado",
+      "logo": "assets/brands/pecado-logo.webp",
+      "projects": [
+        {
+          "id": "project-31",
+          "name": "Papasitos Club",
+          "image": "assets/projects/papasitos-club.webp",
+          "url": "https://vrchat.com/home/world/wrld_03554e91-184f-4a04-9493-dbf402391185/info"
+        },
+        {
+          "id": "project-32",
+          "name": "The Sinners Den",
+          "image": "assets/projects/the-sinners-den.webp",
+          "url": "https://vrchat.com/home/world/wrld_58accfc2-b835-4dcc-8662-7b802af5683c/info"
+        }
+      ]
+    },
+    {
+      "id": "brand-4",
+      "name": "Mini Bunnys Club",
+      "logo": "assets/brands/mini-bunnys-logo.webp",
+      "projects": [
+        {
+          "id": "project-41",
+          "name": "Bunnys Rex Core",
+          "image": "assets/projects/bunnys-rex-core.webp",
+          "url": "https://vrchat.com/home/world/wrld_e4eb6df8-f0a3-458f-a9b0-3545acdf1078/info"
+        },
+        {
+          "id": "project-42",
+          "name": "Bunnys Night Club",
+          "image": "assets/projects/bunnys-night-club.webp",
+          "url": "https://vrchat.com/home/world/wrld_bf988b74-aa5f-4b5f-b20a-38a15ecb1efa/info"
+        }
+      ]
+    }
+  ],
+  "personalProjects": [
+    {
+      "id": "personal-1",
+      "name": "Val's Drinking Night",
+      "image": "assets/projects/vals-drinking-night.webp",
+      "url": "https://vrchat.com/home/world/wrld_a332b55c-1865-43fb-864a-20355cda460e/info",
+      "description": "Spanish and English languages supported․ Drinking Games˸ cards‚ russian roullette‚ speen the wheel‚ never have i ever‚ battleshoots‚ beerpong‚ and moreǃ Chill Areas‚ Private Room‚ Memes and moreǃ"
+    },
+    {
+      "id": "personal-2",
+      "name": "Eternity",
+      "image": "assets/projects/eternity.webp",
+      "url": "https://vrchat.com/home/world/wrld_fd57d6de-9e94-4c01-b303-c00997b055f8/info",
+      "description": "Welcome to Eternity‚ a dance yard betwen the clouds‚ VRC Light Volumes supported‚ Audiolink and drinking gamesǃ"
+    },
+    {
+      "id": "personal-3",
+      "name": "The Sewer",
+      "image": "assets/projects/the-sewer.webp",
+      "url": "https://vrchat.com/home/world/wrld_3eb0bbd4-fbf2-461f-b898-2a1ca8517401/info",
+      "description": "Rave Map‚ VRSL GI‚ AudioLink‚ Drinking Games‚ Gogo Dancers‚ Optimized"
+    }
+  ],
+  "others": [
+    {
+      "id": "other-1",
+      "image": "assets/projects/la-placita-spanish-club.webp",
+      "url": "https://vrchat.com/home/world/wrld_3aded8cb-26f4-4c9c-a8a2-54b89e9272bc/info"
+    },
+    {
+      "id": "other-2",
+      "image": "assets/projects/only-cats.webp",
+      "url": "https://vrchat.com/home/world/wrld_a831dab4-84a3-4652-94cc-a3d8eafb3bb7/info"
+    },
+    {
+      "id": "other-3",
+      "image": "assets/projects/vrton2025.webp",
+      "url": "https://vrchat.com/home/world/wrld_9570ff7b-683f-41cc-aeb9-0c07532f59b8/info"
+    },
+    {
+      "id": "other-4",
+      "image": "assets/projects/demon-cat.webp",
+      "url": "https://vrchat.com/home/world/wrld_cb82cf73-d494-4c02-b0e7-39c9440a73cb/info"
+    },
+    {
+      "id": "other-5",
+      "image": "assets/projects/las-cariñosas.webp",
+      "url": "https://vrchat.com/home/world/wrld_598909f3-72c2-40c8-8ba3-fae07a74955a/info"
+    },
+    {
+      "id": "other-6",
+      "image": "assets/projects/la-isla-spanish.webp",
+      "url": "https://vrchat.com/home/world/wrld_621f2f3f-df6f-4d1a-b0e0-57ee6ff844ca/info"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "review-1",
+      "text": "Just worked with @Valen on a world comission. Honestly blown away at how personable and fun they were to work with. Was extremely accommodating and didn't shun away from last minute changes. Very quick and gave updates throughout. There were things that weren't even in the original agreement that they pointed out and fixed, just because! If you need work done, speedy and efficiently then please reach out to Valen! I WILL absolutely be working with them again.",
+      "author": "Boop No0dle12",
+      "image": "assets/reviewer-1.webp"
+    },
+    {
+      "id": "review-2",
+      "text": "Es un servicio de primerísima calidad, personalmente lo recomiendo ampliamente, pues no solo es rápido y eficiente en su trabajo, sino que también es capaz de encontrar soluciones innovadoras para los problemas que surgen. Su dedicación y atención al detalle son evidentes en cada proyecto que realiza. Pero lo que hace que trabajar con Valen sea aún más especial es su puntualidad y responsabilidad en los proyectos en los que trabaja, además, se toma el tiempo de que sus resultados cumplan con una muy alta calidad. Su habilidad para investigar y aprender cosas nuevas es una prueba de su compromiso con el trabajo. Es muy gratificante trabajar con él y tenerlo como colaborador. Si estás buscando un programador de VRChat de primer nivel, él es tu mejor opción, pues te da la mejor relación calidad-precio.",
+      "author": "Yuan X",
+      "image": "assets/reviewer-2.webp"
+    },
+    {
+      "id": "review-3",
+      "text": "El trabajo fue muy profesional tanto como su conducta, rapidez y eficaz fue impresionante digno de una profesionista, no me sentí limitado por sus capacidades de programador ya que en todo momento recibí consejos y recomendaciones.",
+      "author": "Dark_Hiro",
+      "image": "assets/reviewer-2.webp"
+    },
+    {
+      "id": "review-4",
+      "text": "El servicio es rápido sinceramente, dice que lo tendrá listo para tal dia pero puede lograr sorprender y lo puede tener incluso antes de lo esperado. Siempre me puso al tanto del progreso del trabajo y me indicio el uso del producto. muy probablemente vuelva a comisionarlo.",
+      "author": "DiosCarmesi",
+      "image": "assets/reviewer-4.webp"
+    },
+    {
+      "id": "review-5",
+      "text": "I purchased the admin panel and originally had a lot of issues setting it up. Valen was amazing and helped me with it every step of the way. The ban panel is amazing and worth every penny! Looking forward to more amazing products by this creator!",
+      "author": "Smol_Bean",
+      "image": "assets/reviewer-4.webp"
+    }
+  ]
+}
