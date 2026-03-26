@@ -41,6 +41,7 @@
         {
             "name" : "com.valenvrc.whitelistedtp",
             "releases" : [
+                "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/v1.2.1/valenvrc.whitelistedtp-v1.2.1.zip",
                 "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/v1.2.0/valenvrc.whitelistedtp-v1.2.0.zip",
                 "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.1.0/com.valenvrc.whitelistedtp.zip",
                 "https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/1.0.1/com.valenvrc.whitelistedtp.zip"
