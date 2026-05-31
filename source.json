@@ -60,6 +60,7 @@
         {
             "name": "com.valenvrc.editortools",
             "releases": [
+                "https://github.com/ElMoha943/com.valenvrc.editortools/releases/download/v1.1.1/com.valenvrc.editortools.zip",
                 "https://github.com/ElMoha943/VEditorTools/releases/download/v1.0.0/valenvrc.EditorTools-v1.0.0.zip"
             ]
         },
