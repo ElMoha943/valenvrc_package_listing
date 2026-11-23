@@ -110,6 +110,48 @@
       "image": "assets/projects/the-sewer.webp",
       "url": "https://vrchat.com/home/world/wrld_3eb0bbd4-fbf2-461f-b898-2a1ca8517401/info",
       "description": "Rave Map‚ VRSL GI‚ AudioLink‚ Drinking Games‚ Gogo Dancers‚ Optimized"
+    },
+    {
+      "id": "personal-4",
+      "name": "El Metro",
+      "image": "assets/projects/el-metro.webp",
+      "url": "https://vrchat.com/home/world/wrld_77c41eb7-24b0-4ce1-86cc-128f9be4b0b1",
+      "description": "Side V's official venue, inspired by Rosario's convention center, with a DMX rig, AudioLink, Latrix lasers, and drinking games."
+    },
+    {
+      "id": "personal-5",
+      "name": "Roldan",
+      "image": "assets/projects/roldan.webp",
+      "url": "https://vrchat.com/home/world/wrld_699e632b-8b55-4f66-a32d-c1ba62331765/info",
+      "description": "Venue for La Hazaña #2."
+    },
+    {
+      "id": "personal-6",
+      "name": "Val's Drinking Night 2",
+      "image": "assets/projects/vals-drinking-night-2.webp",
+      "url": "https://vrchat.com/home/world/wrld_8a11aa27-fe7d-4892-9a5c-a3e72d9eb4f3/info",
+      "description": "A rooftop hangout with drinking games, VRC Light Volumes, a DJ booth, and private rooms."
+    },
+    {
+      "id": "personal-7",
+      "name": "Evil Meeting Room",
+      "image": "assets/projects/evil-meeting-room.webp",
+      "url": "https://vrchat.com/home/world/wrld_e378de3c-a8b5-4586-810e-d16881211311/info",
+      "description": "A meeting room for plotting with your fellow villains."
+    },
+    {
+      "id": "personal-8",
+      "name": "The Carousel",
+      "image": "assets/projects/the-carousel.webp",
+      "url": "https://vrchat.com/home/world/wrld_1ac2d97e-7323-4fc9-adb4-a23efaa51ab6/info",
+      "description": "A one-day project built for colorful screen visuals, with VRC Light Volumes, AudioLink, and drinking games."
+    },
+    {
+      "id": "personal-9",
+      "name": "The Core",
+      "image": "assets/projects/the-core.webp",
+      "url": "https://vrchat.com/home/world/wrld_04d65a86-4d1f-4b75-aa01-f2e2672ecce2/info",
+      "description": "The first piece."
     }
   ],
   "others": [

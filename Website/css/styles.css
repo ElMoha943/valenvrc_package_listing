@@ -1090,6 +1090,8 @@ html {
   border-radius: 8px;
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  display: inline-block;
+  text-align: center;
 }
 
 .commissions-btn.primary {
@@ -2021,6 +2023,18 @@ h1 {
   gap: 2rem;
 }
 
+.personal-projects-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.personal-projects-more .hero-btn {
+  width: auto;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.95rem;
+}
+
 .personal-project-card {
   background: var(--secondary-bg);
   border-radius: 12px;
@@ -2339,6 +2353,7 @@ h1 {
   .nav-link.nav-store-dropdown {
     width: 100%;
     text-align: center;
+    display: block;
   }
   
   .nav-dropdown-content {

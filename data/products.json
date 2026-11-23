@@ -75,6 +75,19 @@
       ]
     },
     {
+      "id": "potions",
+      "name": "Potions",
+      "description": "Boost your friends and debuff your foes with this fun potions gimmick!",
+      "thumbnail": "assets/thumbnails/Potions.webp",
+      "jinxxyLink": "https://jinxxy.com/valenvrc/Potions",
+      "gumroadLink": "https://store.valenvrc.com/l/potions",
+      "features": [
+        "7 Different Effects",
+        "Configurable Duration and Level",
+        "Drinkable and Throwable Variants"
+      ]
+    },
+    {
       "id": "room_system",
       "name": "Room System",
       "description": "Create private rooms for your world with lots of utility and cosmetic options!",
@@ -144,6 +157,31 @@
       "thumbnail": "assets/thumbnails/Service Bell.webp",
       "jinxxyLink": "https://jinxxy.com/valenvrc/ServiceBell",
       "gumroadLink": "https://store.valenvrc.com/l/ServiceBell"
+    },
+    {
+      "id": "elevator_system",
+      "name": "Elevator System",
+      "description": "Connect floors in your VRChat world with a configurable elevator.",
+      "thumbnail": "assets/thumbnails/Elevator System.gif",
+      "jinxxyLink": "https://es.jinxxy.com/valenvrc/Elevator",
+      "features": [
+        "Reusable Floor Prefabs",
+        "Automatic Floor Buttons",
+        "Configurable Door and Arrival Sounds"
+      ]
+    },
+    {
+      "id": "dancer_system",
+      "name": "Dancer System",
+      "description": "Manage dance events in VRChat with a public lineup and per-guest dance counts.",
+      "thumbnail": "assets/thumbnails/Dancer System.gif",
+      "jinxxyLink": "https://es.jinxxy.com/valenvrc/DancerSystem",
+      "features": [
+        "Dancer and Manager Roles",
+        "Security Keypad Integration",
+        "Per-Guest Dance Counters",
+        "Public Lineup with Optional Self Sign-Up"
+      ]
     }
   ]
 }
