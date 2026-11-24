@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free VRChat Packages | ValenVRC</title>
+  <meta name="description" content="Browse and install free ValenVRC packages for VRChat through the VRChat Creator Companion.">
+  <meta name="theme-color" content="#FF6B35">
+  <link rel="canonical" href="https://valenvrc.com/packages">
+  <link rel="icon" href="/favicon.webp" type="image/webp" sizes="48x48">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ValenVRC">
+  <meta property="og:url" content="https://valenvrc.com/packages">
+  <meta property="og:title" content="Free VRChat Packages | ValenVRC">
+  <meta property="og:description" content="Browse and install free ValenVRC packages for VRChat through the VRChat Creator Companion.">
+  <meta name="twitter:card" content="summary">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/navigation.js"></script>
+  <script type="module" src="/js/packages.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="logo" aria-label="ValenVRC home">ValenVRC</a>
+      <button type="button" class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">☰</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <details class="nav-dropdown">
+          <summary class="nav-link nav-store-dropdown">Home <span aria-hidden="true">▾</span></summary>
+          <div class="nav-dropdown-content">
+            <a href="/#products" class="dropdown-item">Products</a>
+            <a href="/#vpm-listing" class="dropdown-item">VPM Listing</a>
+            <a href="/#commissions" class="dropdown-item">Commissions</a>
+          </div>
+        </details>
+        <a href="/portfolio" class="nav-link">Portfolio</a>
+        <a href="/packages" class="nav-link active" aria-current="page">Packages</a>
+        <a href="https://docs.valenvrc.com" target="_blank" rel="noopener" class="nav-link">Docs</a>
+        <details class="nav-dropdown">
+          <summary class="nav-link nav-store-dropdown">Stores <span aria-hidden="true">▾</span></summary>
+          <div class="nav-dropdown-content">
+            <a href="https://jinxxy.com/valenvrc" target="_blank" rel="noopener" class="dropdown-item"><img src="/assets/JinxxyIcon.webp" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Jinxxy</span></a>
+            <a href="https://store.valenvrc.com/" target="_blank" rel="noopener" class="dropdown-item"><img src="/assets/Gumroad_Icon.webp" alt="" width="128" height="128" loading="lazy" decoding="async"><span>Gumroad</span></a>
+          </div>
+        </details>
+        <a href="/discord.html" class="nav-link nav-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="vpm-listing" class="vpm-section">
+      <div class="section-container">
+        <h1 class="section-title">Free Packages Listing</h1>
+
+        <div class="vpm-add-block">
+          <div class="vpm-url-container">
+            <input type="url" id="vpm-url" class="vpm-url-input" readonly value="https://valenvrc.com/index.json" aria-label="VPM repository URL">
+            <button type="button" id="vpm-copy" class="vpm-btn vpm-btn-secondary" hidden>Copy</button>
+            <a class="vpm-btn vpm-btn-primary" href="vcc://vpm/addRepo?url=https%3A%2F%2Fvalenvrc.com%2Findex.json">Add to VCC</a>
+            <button type="button" class="vpm-btn vpm-btn-icon" data-dialog="vpm-help" aria-label="How to add this listing" hidden>?</button>
+          </div>
+        </div>
+
+        <dialog id="vpm-help" class="vpm-modal vpm-modal-content" aria-labelledby="vpm-help-title">
+          <div class="vpm-modal-header">
+            <h2 id="vpm-help-title" class="vpm-modal-title">How to Add This Listing to Your VCC</h2>
+            <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+          </div>
+          <div class="vpm-modal-body">
+            <p>To add this listing to the VRChat Creator Companion:</p>
+            <ol class="vpm-steps">
+              <li>Open your VCC and go to <strong>Settings</strong>.</li>
+              <li>Open the <strong>Packages</strong> tab and select <strong>Add Repository</strong>.</li>
+              <li>Paste the URL displayed above and click <strong>Add</strong>.</li>
+              <li>Review the repository info and click <strong>I Understand</strong>.</li>
+              <li>Open a project to see the packages from this listing.</li>
+            </ol>
+            <div class="vpm-learn-more">
+              <p>Learn more about <a href="https://vcc.docs.vrchat.com" target="_blank" rel="noopener">package listings</a> in the VCC docs.</p>
+            </div>
+          </div>
+        </dialog>
+
+        <div class="vpm-search-container" hidden>
+          <input type="search" id="vpm-search" class="vpm-search-input" placeholder="Search packages…" aria-label="Search VPM packages">
+          <p id="vpm-search-empty" class="vpm-search-empty" role="status" hidden>No matching packages.</p>
+        </div>
+
+        <div class="vpm-packages-container">
+          <div class="vpm-packages-grid">
+            <article class="vpm-package-card" data-package-id="com.valenvrc.common">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">2.10.2</span></div>
+              <h3 class="vpm-package-name">Valenvrc - Common</h3>
+              <p class="vpm-package-id">com.valenvrc.common</p>
+              <p class="vpm-package-description">A compilation of all my utility scripts for VRChat. Mostly are dependences for my other assets.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.10.2/com.valenvrc.common.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-0" aria-label="Info for Valenvrc - Common" hidden>Info</button>
+              </div>
+              <dialog id="package-0" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-0">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-0" class="vpm-modal-title">Valenvrc - Common</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.common • 2.10.2</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A compilation of all my utility scripts for VRChat. Mostly are dependences for my other assets.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://valenvrc.com" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Dependencies</h3><ul><li>com.vrchat.worlds &gt;=3.10.5</li><li>com.vrchat.base &gt;=3.10.5</li></ul></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">scripts</span><span class="vpm-keyword">udon</span><span class="vpm-keyword">vrchat</span><span class="vpm-keyword">common</span><span class="vpm-keyword">library</span><span class="vpm-keyword">utility</span><span class="vpm-keyword">valenvrc</span></div></div></div>
+              </dialog>
+            </article>
+            <article class="vpm-package-card" data-package-id="com.valenvrc.mirror">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">1.0.4</span></div>
+              <h3 class="vpm-package-name">Valenvrc - Mirror</h3>
+              <p class="vpm-package-id">com.valenvrc.mirror</p>
+              <p class="vpm-package-description">A mirror script that has 3 different modes, and can be toggled on and off by distance, also features sounds, particles and an animated menu.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/com.valenvrc.mirror/releases/download/1.0.4/com.valenvrc.mirror.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-1" aria-label="Info for Valenvrc - Mirror" hidden>Info</button>
+              </div>
+              <dialog id="package-1" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-1">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-1" class="vpm-modal-title">Valenvrc - Mirror</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.mirror • 1.0.4</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A mirror script that has 3 different modes, and can be toggled on and off by distance, also features sounds, particles and an animated menu.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://discord.gg/6AcpahXKQu" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Dependencies</h3><ul><li>com.vrchat.worlds &gt;=3.6</li><li>com.valenvrc.common &gt;=1.5.0</li></ul></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">udon</span><span class="vpm-keyword">vrchat</span><span class="vpm-keyword">mirror</span></div></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">License</h3><p>LICENSE.md</p></div></div>
+              </dialog>
+            </article>
+            <article class="vpm-package-card" data-package-id="com.valenvrc.whitelistedtp">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">1.3.0</span></div>
+              <h3 class="vpm-package-name">Valenvrc - WhitelistedTP</h3>
+              <p class="vpm-package-id">com.valenvrc.whitelistedtp</p>
+              <p class="vpm-package-description">A simple teleport script for vrchat with an optional whitelist setting.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/com.valenvrc.whitelistedtp/releases/download/v1.3.0/com.valenvrc.whitelistedtp.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-2" aria-label="Info for Valenvrc - WhitelistedTP" hidden>Info</button>
+              </div>
+              <dialog id="package-2" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-2">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-2" class="vpm-modal-title">Valenvrc - WhitelistedTP</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.whitelistedtp • 1.3.0</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A simple teleport script for vrchat with an optional whitelist setting.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://valenvrc.com" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Dependencies</h3><ul><li>com.vrchat.worlds ^3.4</li></ul></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">whitelist</span><span class="vpm-keyword">teleport</span><span class="vpm-keyword">udon</span><span class="vpm-keyword">vrchat</span></div></div></div>
+              </dialog>
+            </article>
+            <article class="vpm-package-card" data-package-id="com.valenvrc.russian_roullette">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">1.2.1</span></div>
+              <h3 class="vpm-package-name">Valenvrc - Russian Roullette</h3>
+              <p class="vpm-package-id">com.valenvrc.russian_roullette</p>
+              <p class="vpm-package-description">A simple Russian Roullette game for VRChat.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/com.valenvrc.russian_roullette/releases/download/v1.2.1/com.valenvrc.russian_roullette.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-3" aria-label="Info for Valenvrc - Russian Roullette" hidden>Info</button>
+              </div>
+              <dialog id="package-3" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-3">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-3" class="vpm-modal-title">Valenvrc - Russian Roullette</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.russian_roullette • 1.2.1</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A simple Russian Roullette game for VRChat.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://valenvrc.com" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Dependencies</h3><ul><li>com.vrchat.worlds &gt;=3.8.0</li><li>com.valenvrc.common &gt;=2.0.0</li></ul></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">russian_roullette</span><span class="vpm-keyword">udon</span><span class="vpm-keyword">vrchat</span></div></div></div>
+              </dialog>
+            </article>
+            <article class="vpm-package-card" data-package-id="com.valenvrc.editortools">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">1.1.2</span></div>
+              <h3 class="vpm-package-name">Valenvrc - Editor Tools</h3>
+              <p class="vpm-package-id">com.valenvrc.veditortools</p>
+              <p class="vpm-package-description">A collection of editor tools to streamline unity development, specifically for VRChat worlds.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/com.valenvrc.editortools/releases/download/v1.1.2/com.valenvrc.editortools.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-4" aria-label="Info for Valenvrc - Editor Tools" hidden>Info</button>
+              </div>
+              <dialog id="package-4" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-4">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-4" class="vpm-modal-title">Valenvrc - Editor Tools</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.veditortools • 1.1.2</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A collection of editor tools to streamline unity development, specifically for VRChat worlds.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://valenvrc.com" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">tool</span><span class="vpm-keyword">editor</span><span class="vpm-keyword">textures</span><span class="vpm-keyword">models</span><span class="vpm-keyword">importer</span></div></div></div>
+              </dialog>
+            </article>
+            <article class="vpm-package-card" data-package-id="com.valenvrc.MPBEditor">
+              <div class="vpm-package-header"><span class="vpm-package-type">Tool</span><span class="vpm-package-version">1.3.0</span></div>
+              <h3 class="vpm-package-name">Valenvrc - MPB Applier</h3>
+              <p class="vpm-package-id">com.valenvrc.mpbapplier</p>
+              <p class="vpm-package-description">A tool for applying Material Property Blocks (MPB) to multiple objects in Unity, designed for VRChat Udon worlds.</p>
+              <div class="vpm-package-actions">
+                <a href="https://github.com/ElMoha943/MPBApplier/releases/download/v1.3.0/MPBApplier.zip" target="_blank" rel="noopener" class="vpm-package-btn vpm-package-btn-download">Download</a>
+                <button type="button" class="vpm-package-btn vpm-package-btn-info" data-dialog="package-5" aria-label="Info for Valenvrc - MPB Applier" hidden>Info</button>
+              </div>
+              <dialog id="package-5" class="vpm-modal vpm-modal-content vpm-modal-large" aria-labelledby="package-title-5">
+                <div class="vpm-modal-header">
+                  <div>
+                    <h2 id="package-title-5" class="vpm-modal-title">Valenvrc - MPB Applier</h2>
+                    <p class="vpm-modal-subtitle">com.valenvrc.mpbapplier • 1.3.0</p>
+                  </div>
+                  <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+                </div>
+                <div class="vpm-modal-body"><div class="vpm-modal-section"><h3 class="vpm-detail-title">Description</h3><p>A tool for applying Material Property Blocks (MPB) to multiple objects in Unity, designed for VRChat Udon worlds.</p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Author</h3><p><a href="https://valenvrc.com" target="_blank" rel="noopener">valenvrc</a></p></div>
+                  <div class="vpm-modal-section"><h3 class="vpm-detail-title">Keywords</h3><div class="vpm-modal-keywords"><span class="vpm-keyword">tool</span><span class="vpm-keyword">material</span><span class="vpm-keyword">material property block</span><span class="vpm-keyword">editor</span><span class="vpm-keyword">udon</span><span class="vpm-keyword">vrchat</span><span class="vpm-keyword">mpb</span></div></div></div>
+              </dialog>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="packages-github-section">
+      <div class="section-container">
+        <div class="hero-buttons">
+          <a class="hero-btn primary" href="https://github.com/ElMoha943/valenvrc_package_listing" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>Sitemap</h2>
+        <ul class="footer-links">
+          <li><a href="/#products">Products</a></li>
+          <li><a href="/#vpm-listing">VPM Listing</a></li>
+          <li><a href="/#commissions">Commissions</a></li>
+          <li><a href="/portfolio">Portfolio</a></li>
+          <li><a href="/packages" aria-current="page">Packages</a></li>
+          <li><a href="https://docs.valenvrc.com" target="_blank" rel="noopener">Documentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Stores</h2>
+        <ul class="footer-links">
+          <li><a href="https://jinxxy.com/valenvrc" target="_blank" rel="noopener">Jinxxy Store</a></li>
+          <li><a href="https://store.valenvrc.com/" target="_blank" rel="noopener">Gumroad Store</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Social Media</h2>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg/6AcpahXKQu" target="_blank" rel="noopener">Discord Server</a></li>
+          <li><a href="https://x.com/ValenVRC943" target="_blank" rel="noopener">Twitter / X</a></li>
+          <li><a href="https://www.instagram.com/valenn.vrc/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/@valenvrc" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://vrc.group/VVRC.0121" target="_blank" rel="noopener">VRChat Group</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2>Legal</h2>
+        <ul class="footer-links">
+          <li><a href="https://docs.valenvrc.com/tos" target="_blank" rel="noopener">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 ValenVRC. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
