@@ -24,3 +24,6 @@ node_modules
 # Temporary files
 tmp/
 temp/
+build/
+dist/
+__pycache__/

@@ -1,4 +1,2 @@
-// Redirect to actual app.js location
-// This file exists only to satisfy build tool validation
-// The actual app.js is in js/app.js
-export * from './js/app.js';
+// The VRChat listing builder expects this file alongside its index template.
+// The published pages load their scripts from components/layout.html.

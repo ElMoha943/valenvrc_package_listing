@@ -157,31 +157,37 @@
   "others": [
     {
       "id": "other-1",
+      "name": "La Placita Spanish Club",
       "image": "assets/projects/la-placita-spanish-club.webp",
       "url": "https://vrchat.com/home/world/wrld_3aded8cb-26f4-4c9c-a8a2-54b89e9272bc/info"
     },
     {
       "id": "other-2",
+      "name": "Only Cats",
       "image": "assets/projects/only-cats.webp",
       "url": "https://vrchat.com/home/world/wrld_a831dab4-84a3-4652-94cc-a3d8eafb3bb7/info"
     },
     {
       "id": "other-3",
+      "name": "VRTon 2025",
       "image": "assets/projects/vrton2025.webp",
       "url": "https://vrchat.com/home/world/wrld_9570ff7b-683f-41cc-aeb9-0c07532f59b8/info"
     },
     {
       "id": "other-4",
+      "name": "Demon Cat",
       "image": "assets/projects/demon-cat.webp",
       "url": "https://vrchat.com/home/world/wrld_cb82cf73-d494-4c02-b0e7-39c9440a73cb/info"
     },
     {
       "id": "other-5",
+      "name": "Las Cariñosas",
       "image": "assets/projects/las-cariñosas.webp",
       "url": "https://vrchat.com/home/world/wrld_598909f3-72c2-40c8-8ba3-fae07a74955a/info"
     },
     {
       "id": "other-6",
+      "name": "La Isla Spanish",
       "image": "assets/projects/la-isla-spanish.webp",
       "url": "https://vrchat.com/home/world/wrld_621f2f3f-df6f-4d1a-b0e0-57ee6ff844ca/info"
     }

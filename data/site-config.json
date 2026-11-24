@@ -1,17 +1,19 @@
 {
   "site": {
-    "title": "Val's Creations",
-    "tagline": "VRChat World Creator & Custom Systems Developer",
-    "welcomeMessage": "Welcome to Val's Creations - Your source for premium VRChat content and custom development"
+    "name": "ValenVRC",
+    "url": "https://valenvrc.com",
+    "themeColor": "#FF6B35",
+    "copyrightYear": 2025
   },
   "links": {
     "stores": {
       "jinxxy": "https://jinxxy.com/valenvrc",
       "gumroad": "https://store.valenvrc.com/"
     },
-    "discord": "valenvrc.com/discord",
+    "discord": "/discord.html",
     "docs": "https://docs.valenvrc.com",
-    "tos": "https://docs.valenvrc.com/tos#commission-terms-and-conditions"
+    "tos": "https://docs.valenvrc.com/tos",
+    "vrchatProfile": "https://vrchat.com/home/user/usr_62a9e36c-faf7-4143-bb88-f313817ebb4d"
   },
   "social": {
     "twitter": "https://x.com/ValenVRC943",
@@ -33,5 +35,28 @@
     ],
     "contactText": "Interested in working together? Join my Discord server to discuss your project!",
     "contactButton": "Contact on Discord"
+  },
+  "pages": {
+    "home": {
+      "title": "ValenVRC | VRChat Worlds, Unity Assets & Udon Systems",
+      "description": "Browse ValenVRC's VRChat worlds, premium Unity assets, free Creator Companion packages, and custom Udon development services.",
+      "heading": "Val's Creations",
+      "intro": "VRChat worlds, Unity assets, and custom Udon systems.",
+      "image": "assets/projects/vals-drinking-night-2.webp",
+      "imageAlt": "Val's Drinking Night 2, a VRChat world by ValenVRC"
+    },
+    "portfolio": {
+      "title": "VRChat Portfolio & Client Reviews | ValenVRC",
+      "description": "Explore VRChat worlds built by ValenVRC for clients and personal projects, and read client reviews of custom world development.",
+      "heading": "Portfolio",
+      "intro": "Showcasing my work in VRChat world creation and design",
+      "image": "assets/projects/d4rk-l1ght.webp",
+      "imageAlt": "D4rk L1ght, a VRChat world in the ValenVRC portfolio"
+    },
+    "packages": {
+      "title": "Free VRChat Packages | ValenVRC",
+      "description": "Browse and install free ValenVRC packages for VRChat through the VRChat Creator Companion.",
+      "heading": "Free Packages Listing"
+    }
   }
 }

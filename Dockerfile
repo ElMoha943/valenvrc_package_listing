@@ -1,45 +1,25 @@
-# Multi-stage build for VPM Package Listing
-
-# Stage 1: Build the listing
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
-
-# Set up the workspace
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS listing
 WORKDIR /github/workspace
 
-# Install git
 RUN apt-get update && apt-get install -y git
-
-# Copy source files
+RUN git clone https://github.com/vrchat-community/package-list-action.git ci
 COPY source.json ./source.json
+COPY Website/index.html Website/app.js ./Website/
+WORKDIR /github/workspace/ci
+RUN bash build.sh BuildMultiPackageListing \
+    --root /github/workspace/ci \
+    --package-listing-source-folder /github/workspace \
+    --list-publish-directory /github/workspace/build/vpm
+
+FROM python:3.12-slim AS website
+WORKDIR /site
+COPY build_site.py source.json ./
 COPY Website/ ./Website/
 COPY data/ ./data/
+COPY --from=listing /github/workspace/build/vpm/index.json ./build/vpm/index.json
+RUN python build_site.py --vpm-index build/vpm/index.json
 
-# Prepare data files for Website
-RUN mkdir -p ./Website/data && \
-    cp data/products.json Website/data/ && \
-    cp data/site-config.json Website/data/ && \
-    cp data/portfolio.json Website/data/ && \
-    cp source.json Website/source.json
-
-# Clone the package-list-action repo
-RUN git clone https://github.com/vrchat-community/package-list-action.git ci
-
-# Run the build matching the working GitHub Actions config
-RUN cd ci && \
-    chmod +x build.sh && \
-    ./build.sh BuildMultiPackageListing \
-    --root /github/workspace/ci \
-    --list-publish-directory /github/workspace/Website
-
-# Stage 2: Serve with nginx
 FROM nginx:alpine
-
-# Copy built website from builder
-COPY --from=builder /github/workspace/Website /usr/share/nginx/html
-
-# Copy custom nginx config
+COPY --from=website /site/dist/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-
 EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]

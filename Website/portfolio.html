@@ -1,180 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - ValenVRC | VRChat Projects & Client Reviews</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Explore ValenVRC's portfolio of VRChat projects, custom worlds, and client testimonials. See our work for top brands and personal projects in the VRChat community.">
-  <meta name="keywords" content="VRChat Portfolio, VRC Projects, VRChat Worlds Portfolio, VRChat Creator Works, Custom VRChat Worlds, VRChat Development, ValenVRC Projects">
-  <meta name="author" content="ValenVRC">
-  <meta name="theme-color" content="#FF6B35">
-  <link rel="canonical" href="https://valenvrc.com/portfolio">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://valenvrc.com/portfolio">
-  <meta property="og:title" content="Portfolio - ValenVRC">
-  <meta property="og:description" content="Explore ValenVRC's portfolio of VRChat projects, custom worlds, and client testimonials. See our work for top brands and personal projects.">
-  <!-- <meta property="og:image" content="https://valenvrc.com/assets/og-image.jpg"> -->
-  <meta property="og:site_name" content="ValenVRC">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://valenvrc.com/portfolio">
-  <meta property="twitter:title" content="Portfolio - ValenVRC">
-  <meta property="twitter:description" content="Explore ValenVRC's portfolio of VRChat projects, custom worlds, and client testimonials.">
-  <!-- <meta property="twitter:image" content="https://valenvrc.com/assets/og-image.jpg"> -->
-  <meta property="twitter:site" content="@ValenVRC943">
-  <meta property="twitter:creator" content="@ValenVRC943">
-  
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/navigation.js"></script>
-</head>
-<body>
-  <!-- Header Navigation -->
-  <header class="site-header">
-    <div class="header-container">
-      <a href="./" class="logo" aria-label="ValenVRC home">ValenVRC</a>
-      <button type="button" class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="main-nav">
-        ☰
-      </button>
-      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <details class="nav-dropdown">
-          <summary class="nav-link nav-store-dropdown">Home <span aria-hidden="true">▾</span></summary>
-          <div class="nav-dropdown-content">
-            <a href="./#products" class="dropdown-item">
-              <span>Products</span>
-            </a>
-            <a href="./#vpm-listing" class="dropdown-item">
-              <span>VPM Listing</span>
-            </a>
-            <a href="./#commissions" class="dropdown-item">
-              <span>Commissions</span>
-            </a>
-          </div>
-        </details>
-        <a href="portfolio.html" class="nav-link active" aria-current="page">Portfolio</a>
-        <a href="https://docs.valenvrc.com" target="_blank" class="nav-link">Docs</a>
-        <details class="nav-dropdown">
-          <summary class="nav-link nav-store-dropdown">Stores <span aria-hidden="true">▾</span></summary>
-          <div class="nav-dropdown-content">
-            <a href="https://jinxxy.com/valenvrc" target="_blank" class="dropdown-item">
-              <img src="assets/JinxxyIcon.webp" alt="">
-              <span>Jinxxy</span>
-            </a>
-            <a href="https://store.valenvrc.com/" target="_blank" class="dropdown-item">
-              <img src="assets/Gumroad_Icon.webp" alt="">
-              <span>Gumroad</span>
-            </a>
-          </div>
-        </details>
-        <a href="discord.html" class="nav-link nav-discord">Discord</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-  <!-- Hero Section -->
-  <section class="hero-section portfolio-hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Portfolio</h1>
-      <p class="hero-subtitle">Showcasing my work in VRChat world creation and design</p>
-    </div>
-  </section>
-
-  <!-- Worked For Section -->
-  <section class="portfolio-section worked-for-section" id="worked-for">
-    <div class="section-container">
-      <h2 class="section-title">Worked For</h2>
-      <div id="worked-for-content" class="worked-for-content">
-        <!-- Will be populated by JavaScript -->
+    <!-- Hero Section -->
+    <section class="hero-section portfolio-hero">
+      <div class="hero-content">
+        <h1 class="hero-title">${heading}</h1>
+        <p class="hero-subtitle">${intro}</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Personal Projects Section -->
-  <section class="portfolio-section personal-projects-section" id="personal-projects">
-    <div class="section-container">
-      <h2 class="section-title">Personal Projects</h2>
-      <div id="personal-projects-grid" class="personal-projects-grid">
-        <!-- Will be populated by JavaScript -->
-      </div>
-      <div class="personal-projects-more">
-        <a class="hero-btn secondary" href="https://vrchat.com/home/user/usr_62a9e36c-faf7-4143-bb88-f313817ebb4d" target="_blank" rel="noopener">See More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Others Section -->
-  <section class="portfolio-section others-section" id="others">
-    <div class="section-container">
-      <h2 class="section-title">Other Projects</h2>
-      <div id="others-grid" class="others-grid">
-        <!-- Will be populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Reviews Section -->
-  <section class="portfolio-section reviews-section" id="reviews">
-    <div class="section-container">
-      <h2 class="section-title">Client Reviews</h2>
-      <div class="reviews-carousel-container">
-        <button type="button" class="carousel-nav carousel-nav-prev" aria-label="Previous reviews" aria-controls="reviews-carousel" disabled>‹</button>
-        <div id="reviews-carousel" class="reviews-carousel" tabindex="0" role="region" aria-label="Client reviews">
-          <!-- Will be populated by JavaScript -->
+    <!-- Worked For Section -->
+    <section class="portfolio-section worked-for-section" id="worked-for">
+      <div class="section-container">
+        <h2 class="section-title">Worked For</h2>
+        <div id="worked-for-content" class="worked-for-content">
+          ${worked_for}
         </div>
-        <button type="button" class="carousel-nav carousel-nav-next" aria-label="Next reviews" aria-controls="reviews-carousel" disabled>›</button>
       </div>
-    </div>
-  </section>
-  </main>
+    </section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-container">
-      <div class="footer-section">
-        <h3>Sitemap</h3>
-        <ul class="footer-links">
-          <li><a href="/#products">Products</a></li>
-          <li><a href="/#vpm-listing">VPM Listing</a></li>
-          <li><a href="/#commissions">Commissions</a></li>
-          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-          <li><a href="https://docs.valenvrc.com" target="_blank">Documentation</a></li>
-        </ul>
+    <!-- Personal Projects Section -->
+    <section class="portfolio-section personal-projects-section" id="personal-projects">
+      <div class="section-container">
+        <h2 class="section-title">Personal Projects</h2>
+        <div id="personal-projects-grid" class="personal-projects-grid">
+          ${personal_projects}
+        </div>
+        <div class="personal-projects-more">
+          <a class="hero-btn secondary" href="${vrchat_profile}" target="_blank" rel="noopener">See More</a>
+        </div>
       </div>
-      <div class="footer-section">
-        <h3>Stores</h3>
-        <ul class="footer-links">
-          <li><a href="https://jinxxy.com/valenvrc" target="_blank">Jinxxy Store</a></li>
-          <li><a href="https://store.valenvrc.com/" target="_blank">Gumroad Store</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Social Media</h3>
-        <ul class="footer-links">
-          <li><a href="https://discord.gg/6AcpahXKQu" target="_blank">Discord Server</a></li>
-          <li><a href="https://x.com/ValenVRC943" target="_blank">Twitter / X</a></li>
-          <li><a href="https://www.instagram.com/valenn.vrc/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.youtube.com/@valenvrc" target="_blank">YouTube</a></li>
-          <li><a href="https://vrc.group/VVRC.0121" target="_blank">VRChat Group</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Legal</h3>
-        <ul class="footer-links">
-          <li><a href="https://docs.valenvrc.com/tos" target="_blank">Terms of Service</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 ValenVRC. All rights reserved.</p>
-    </div>
-  </footer>
+    </section>
 
-  <script src="js/portfolio.js"></script>
-</body>
-</html>
+    <!-- Others Section -->
+    <section class="portfolio-section others-section" id="others">
+      <div class="section-container">
+        <h2 class="section-title">Other Projects</h2>
+        <div id="others-grid" class="others-grid">
+          ${other_projects}
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="portfolio-section reviews-section" id="reviews">
+      <div class="section-container">
+        <h2 class="section-title">Client Reviews</h2>
+        <div class="reviews-carousel-container">
+          ${reviews_previous}
+          <div id="reviews-carousel" class="reviews-carousel" tabindex="0" role="region" aria-label="Client reviews">
+            ${reviews}
+          </div>
+          ${reviews_next}
+        </div>
+      </div>
+    </section>

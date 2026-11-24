@@ -1,43 +1,32 @@
-# VPM Package Listing Template
+﻿# ValenVRC website and VPM listing
 
-Starter for making your own Package Listings, including automation for building and publishing them.
+This repository builds the ValenVRC storefront, portfolio, and free VRChat packages at [valenvrc.com](https://valenvrc.com/). The site ships as static HTML, CSS, JavaScript, and WebP images.
 
-Once you're all set up, you'll be able to update the `source.json` file, and generate a listing which works in the VPM for delivering updates for all the listed packages.
+## Edit the site
 
-## ▶ Getting Started
+| To update | Edit |
+| --- | --- |
+| Site name, page titles, descriptions, introductions, share images, store links, social links, and commission services | [data/site-config.json](data/site-config.json) |
+| Products, thumbnails, descriptions, features, and purchase links | [data/products.json](data/products.json) |
+| Client projects, personal projects, gallery images, and reviews | [data/portfolio.json](data/portfolio.json) |
+| VPM packages and release ZIP URLs | [source.json](source.json) |
+| Shared page markup | [Website/components](Website/components) |
+| Page sections and styles | [Website](Website) and [Website/css/styles.css](Website/css/styles.css) |
 
-* Press [![Use This Template](https://user-images.githubusercontent.com/737888/185467681-e5fdb099-d99f-454b-8d9e-0760e5a6e588.png)](https://github.com/vrchat-community/template-package-listing/generate)
-to start a new GitHub project based on this template, and follow the directions there. 
-  * Choose a fitting repository name and description.
-  * Set the visibility to 'Public'. You can also choose 'Private' and change it later.
-  * You don't need to select 'Include all branches.'
-* Edit this project on GitHub in your web browser, or clone it repository locally using Git.
-  * If you're unfamiliar with Git and GitHub, [visit GitHub's documentation](https://docs.github.com/en/get-started/quickstart/
-  
-## Setting up the Automation
+The JSON arrays control display order. Give new products and projects unique IDs. Put images under [Website/assets](Website/assets) and use paths relative to Website, such as assets/projects/my-world.webp. Use a static WebP for project images and a square WebP up to 360 × 360 pixels for product thumbnails. Animated WebP works for product previews.
 
-You'll need to edit some of the files in this template, starting with [`source.json`](source.json):
-- Fill out general information about your listing, such as the `name`, `id`, `author`, `description`, etc.
-- Make sure to update the "url" field on line 4, replacing "vrchat-community" with your GitHub username, and "template-package-listing" with your repo name. This is the link that will be used to download your listing once it's published by GitHub. For example, the user "thupper" who made a repo called "thupper-listing" would update the url to "https://thupper.github.io/thupper-listing/index.json".
-- Update the "url" within "infoLink" (on line 11) with the url of this new repo you've created.
-- If you'd like to include packages hosted on GitHub, specify them in `githubRepos`.
-- If you'd like to include packages hosted elsewhere as a `.zip` file, specify them in `packages`.
-  - You can safely remove either `githubRepos` or `packages` if you're not using them. 
-- Finally, go to the "Settings" page for your repo, then choose "Pages", and look for the heading "Build and deployment". Change the "Source" dropdown from "Deploy from a branch" to "GitHub Actions".
+The packages page uses the first ZIP URL in each package's release list. The build adds version details and descriptions when the generated VPM index includes that release.
 
-## 📃 Rebuilding the Listing
+## Build and preview
 
-Whenever you make a change to the `main` branch, or when you trigger it manually, the 'Build Repo Listing' action will make a new index of all the releases available and publish them as a website hosted fore free on GitHub Pages. This listing can be used by the VPM to keep your package up to date, and the generated index page can serve as a simple landing page with info for your package. The URL for your package will be in the format https://username.github.io/repo-name.
+Use Python 3.10 or later. The site builder uses the standard library.
 
-## 🏠 Customizing the Landing Page
+    python build_site.py --serve
 
-The contents of the `Website` directory can be customized to change the appearance of the landing page. Most of the information will be automatically filled in with information from [`source.json`](source.json). Customizing the landing page by hand is not required.
+Open [http://127.0.0.1:8080](http://127.0.0.1:8080/). If that port is in use, pass `--port 8081`. Stop and restart the command to rebuild after edits. Run `python build_site.py` on its own to generate the site without starting a server. Both commands replace the contents of `dist/`.
 
-## Technical Stuff
+For an offline preview, the builder uses the checked-in Website/index.json snapshot. To generate a fresh VPM index and serve the resulting site through Nginx, run the Docker build.
 
-You are welcome to make your own changes to the automation process to make it fit your needs, and you can create Pull Requests if you have some changes you think we should adopt. Here's some more info on the included automation:
+    docker compose up --build
 
-### Build Listing
-[build-listing.yml](.github/workflows/build-listing.yml)
-
-This is a composite action which builds a vpm-compatible [Repo Listing](https://vcc.docs.vrchat.com/vpm/repos) based on the items you've added to your `source.json` file. you've created. In order to find all your releases and combine them into a listing, it checks out [another repository](https://github.com/vrchat-community/package-list-action) which has a [Nuke](https://nuke.build/) project which includes the VPM core lib to have access to its types and methods. This project will be expanded to include more functionality in the future - for now, the action just calls its `BuildRepoListing` target, which calls `RebuildHomePage` when it completes. If you wanted to make an action that just rebuilds the home page, you could call that directly instead - just copy the existing call and replace the target names.
+The [GitHub Actions workflow](.github/workflows/build-listing.yml) runs VRChat's package listing generator, passes its index.json into the site build, and publishes dist/ to the production branch. The published feed remains at [valenvrc.com/index.json](https://valenvrc.com/index.json).

@@ -1,0 +1,45 @@
+    <section id="vpm-listing" class="vpm-section">
+      <div class="section-container">
+        <${heading_tag} class="section-title">${heading}</${heading_tag}>
+
+        <div class="vpm-add-block">
+          <div class="vpm-url-container">
+            <input type="url" id="vpm-url" class="vpm-url-input" readonly value="${listing_url}" aria-label="VPM repository URL">
+            <button type="button" id="vpm-copy" class="vpm-btn vpm-btn-secondary" hidden>Copy</button>
+            <a class="vpm-btn vpm-btn-primary" href="${vcc_url}">Add to VCC</a>
+            <button type="button" class="vpm-btn vpm-btn-icon" data-dialog="vpm-help" aria-label="How to add this listing" hidden>?</button>
+          </div>
+        </div>
+
+        <dialog id="vpm-help" class="vpm-modal vpm-modal-content" aria-labelledby="vpm-help-title">
+          <div class="vpm-modal-header">
+            <h2 id="vpm-help-title" class="vpm-modal-title">How to Add This Listing to Your VCC</h2>
+            <form method="dialog"><button type="submit" class="vpm-modal-close" aria-label="Close">×</button></form>
+          </div>
+          <div class="vpm-modal-body">
+            <p>To add this listing to the VRChat Creator Companion:</p>
+            <ol class="vpm-steps">
+              <li>Open your VCC and go to <strong>Settings</strong>.</li>
+              <li>Open the <strong>Packages</strong> tab and select <strong>Add Repository</strong>.</li>
+              <li>Paste the URL displayed above and click <strong>Add</strong>.</li>
+              <li>Review the repository info and click <strong>I Understand</strong>.</li>
+              <li>Open a project to see the packages from this listing.</li>
+            </ol>
+            <div class="vpm-learn-more">
+              <p>Learn more about <a href="https://vcc.docs.vrchat.com" target="_blank" rel="noopener">package listings</a> in the VCC docs.</p>
+            </div>
+          </div>
+        </dialog>
+
+        <div class="vpm-search-container" hidden>
+          <input type="search" id="vpm-search" class="vpm-search-input" placeholder="Search packages…" aria-label="Search VPM packages">
+          <p id="vpm-search-empty" class="vpm-search-empty" role="status" hidden>No matching packages.</p>
+        </div>
+
+        <div class="vpm-packages-container">
+          <div class="vpm-packages-grid">
+            ${package_cards}
+          </div>
+        </div>
+      </div>
+    </section>

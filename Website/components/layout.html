@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${title}</title>
+  <meta name="description" content="${description}">
+  <meta name="theme-color" content="${theme_color}">
+  <link rel="canonical" href="${canonical}">
+  <link rel="icon" href="/favicon.webp" type="image/webp" sizes="48x48">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="${site_name}">
+  <meta property="og:url" content="${canonical}">
+  <meta property="og:title" content="${title}">
+  <meta property="og:description" content="${description}">
+  ${social_preview}
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/navigation.js"></script>
+  ${page_scripts}
+</head>
+<body>
+${header}
+
+  <main>
+${content}
+  </main>
+
+${footer}
+</body>
+</html>
