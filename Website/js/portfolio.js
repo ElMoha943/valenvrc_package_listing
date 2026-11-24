@@ -1,18 +1,12 @@
 // Portfolio Page JavaScript
 
 let portfolioData = null;
-let siteConfig = null;
 
-// Load portfolio data and site config
+// Load portfolio data
 async function loadPortfolioData() {
   try {
-    const [portfolioResponse, configResponse] = await Promise.all([
-      fetch('data/portfolio.json'),
-      fetch('data/site-config.json')
-    ]);
-    
-    portfolioData = await portfolioResponse.json();
-    siteConfig = await configResponse.json();
+    const response = await fetch('data/portfolio.json');
+    portfolioData = await response.json();
     
     initPortfolio();
   } catch (error) {
@@ -26,10 +20,7 @@ function initPortfolio() {
   renderPersonalProjects();
   renderOthers();
   renderReviews();
-  populateFooterSocial();
   initCarousels();
-  initDropdowns();
-  initMobileMenu();
 }
 
 // Render Worked For section
@@ -43,16 +34,16 @@ function renderWorkedFor() {
     
     brandSection.innerHTML = `
       <div class="brand-info">
-        <img src="${brand.logo}" alt="${brand.name}" class="brand-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%232a2a2a%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ELogo%3C/text%3E%3C/svg%3E'">
+        <img loading="lazy" decoding="async" src="${brand.logo}" alt="" class="brand-logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22%3E%3Crect fill=%22%232a2a2a%22 width=%22100%22 height=%22100%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2214%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ELogo%3C/text%3E%3C/svg%3E'">
         <h3 class="brand-name">${brand.name}</h3>
       </div>
       <div class="projects-carousel-container">
-        <button class="carousel-nav carousel-nav-prev" data-brand="${brand.id}">‹</button>
+        <button type="button" class="carousel-nav carousel-nav-prev" aria-label="Previous projects" aria-controls="carousel-${brand.id}" disabled>‹</button>
         <div class="projects-carousel" id="carousel-${brand.id}">
           ${brand.projects.map(project => `
             <a href="${project.url}" target="_blank" class="project-card">
               <div class="project-image">
-                <img src="${project.image}" alt="${project.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%232a2a2a%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2218%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
+                <img loading="lazy" decoding="async" src="${project.image}" alt="" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22%3E%3Crect fill=%22%232a2a2a%22 width=%22300%22 height=%22200%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2218%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
               </div>
               <div class="project-info">
                 <h4>${project.name}</h4>
@@ -60,7 +51,7 @@ function renderWorkedFor() {
             </a>
           `).join('')}
         </div>
-        <button class="carousel-nav carousel-nav-next" data-brand="${brand.id}">›</button>
+        <button type="button" class="carousel-nav carousel-nav-next" aria-label="Next projects" aria-controls="carousel-${brand.id}" disabled>›</button>
       </div>
     `;
     
@@ -81,7 +72,7 @@ function renderPersonalProjects() {
     
     card.innerHTML = `
       <div class="personal-project-image">
-        <img src="${project.image}" alt="${project.name}" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%232a2a2a%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
+        <img loading="lazy" decoding="async" src="${project.image}" alt="" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%232a2a2a%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
       </div>
       <div class="personal-project-info">
         <h3>${project.name}</h3>
@@ -105,7 +96,7 @@ function renderOthers() {
     card.className = 'other-project-card';
     
     card.innerHTML = `
-      <img src="${project.image}" alt="Project" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%232a2a2a%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
+      <img loading="lazy" decoding="async" src="${project.image}" alt="Project" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22%3E%3Crect fill=%22%232a2a2a%22 width=%22200%22 height=%22200%22/%3E%3Ctext fill=%22%23888%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage%3C/text%3E%3C/svg%3E'">
     `;
     
     container.appendChild(card);
@@ -131,7 +122,7 @@ function renderReviews() {
       </div>
       <div class="review-author">
         ${review.image ? `
-          <img src="${review.image}" alt="${review.author}" class="review-avatar" onerror="this.style.display='none'">
+          <img loading="lazy" decoding="async" src="${review.image}" alt="" class="review-avatar" onerror="this.style.display='none'">
         ` : ''}
         <span class="review-name">${review.author}</span>
       </div>
@@ -141,165 +132,24 @@ function renderReviews() {
   });
 }
 
-// Initialize carousels for project sections
+// Keep the controls in sync with scrolling and layout changes.
 function initCarousels() {
-  // Projects carousels
-  portfolioData.workedFor.forEach(brand => {
-    const carousel = document.getElementById(`carousel-${brand.id}`);
-    const prevBtn = document.querySelector(`[data-brand="${brand.id}"].carousel-nav-prev`);
-    const nextBtn = document.querySelector(`[data-brand="${brand.id}"].carousel-nav-next`);
-    
-    if (carousel && prevBtn && nextBtn) {
-      let scrollPosition = 0;
-      
-      prevBtn.addEventListener('click', () => {
-        const scrollAmount = carousel.offsetWidth * 0.8;
-        scrollPosition = Math.max(0, scrollPosition - scrollAmount);
-        carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-      });
-      
-      nextBtn.addEventListener('click', () => {
-        const scrollAmount = carousel.offsetWidth * 0.8;
-        const maxScroll = carousel.scrollWidth - carousel.offsetWidth;
-        scrollPosition = Math.min(maxScroll, scrollPosition + scrollAmount);
-        carousel.scrollTo({ left: scrollPosition, behavior: 'smooth' });
-      });
-      
-      carousel.addEventListener('scroll', () => {
-        scrollPosition = carousel.scrollLeft;
-      });
-    }
-  });
-  
-  // Reviews carousel
-  const reviewsCarousel = document.getElementById('reviews-carousel');
-  const reviewsPrev = document.getElementById('reviews-prev');
-  const reviewsNext = document.getElementById('reviews-next');
-  
-  if (reviewsCarousel && reviewsPrev && reviewsNext) {
-    let reviewScrollPosition = 0;
-    
-    reviewsPrev.addEventListener('click', () => {
-      const scrollAmount = reviewsCarousel.offsetWidth * 0.9;
-      reviewScrollPosition = Math.max(0, reviewScrollPosition - scrollAmount);
-      reviewsCarousel.scrollTo({ left: reviewScrollPosition, behavior: 'smooth' });
-    });
-    
-    reviewsNext.addEventListener('click', () => {
-      const scrollAmount = reviewsCarousel.offsetWidth * 0.9;
-      const maxScroll = reviewsCarousel.scrollWidth - reviewsCarousel.offsetWidth;
-      reviewScrollPosition = Math.min(maxScroll, reviewScrollPosition + scrollAmount);
-      reviewsCarousel.scrollTo({ left: reviewScrollPosition, behavior: 'smooth' });
-    });
-    
-    reviewsCarousel.addEventListener('scroll', () => {
-      reviewScrollPosition = reviewsCarousel.scrollLeft;
-    });
-  }
-}
+  document.querySelectorAll('.projects-carousel-container, .reviews-carousel-container').forEach(container => {
+    const carousel = container.querySelector('.projects-carousel, .reviews-carousel');
+    const previous = container.querySelector('.carousel-nav-prev');
+    const next = container.querySelector('.carousel-nav-next');
 
-// Populate footer social links
-function populateFooterSocial() {
-  const container = document.getElementById('footer-social-links');
-  if (!container || !siteConfig?.social) return;
-  
-  const social = siteConfig.social;
-  
-  if (social.discord) {
-    const link = document.createElement('a');
-    link.href = social.discord;
-    link.target = '_blank';
-    link.textContent = 'Discord';
-    container.appendChild(link);
-  }
-  
-  if (social.twitter) {
-    const link = document.createElement('a');
-    link.href = social.twitter;
-    link.target = '_blank';
-    link.textContent = 'Twitter';
-    container.appendChild(link);
-  }
-  
-  if (social.vrchat) {
-    const link = document.createElement('a');
-    link.href = social.vrchat;
-    link.target = '_blank';
-    link.textContent = 'VRChat';
-    container.appendChild(link);
-  }
-}
-
-// Initialize dropdown menus
-function initDropdowns() {
-  const dropdowns = document.querySelectorAll('.nav-dropdown');
-  
-  dropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector('.nav-store-dropdown');
-    const content = dropdown.querySelector('.nav-dropdown-content');
-    
-    if (button && content) {
-      button.addEventListener('mouseenter', () => {
-        content.style.display = 'block';
-      });
-      
-      dropdown.addEventListener('mouseleave', () => {
-        content.style.display = 'none';
-      });
+    function updateControls() {
+      previous.disabled = carousel.scrollLeft <= 1;
+      next.disabled = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1;
     }
+
+    previous.addEventListener('click', () => carousel.scrollBy({ left: -carousel.clientWidth * 0.85 }));
+    next.addEventListener('click', () => carousel.scrollBy({ left: carousel.clientWidth * 0.85 }));
+    carousel.addEventListener('scroll', updateControls, { passive: true });
+    new ResizeObserver(updateControls).observe(carousel);
+    updateControls();
   });
 }
 
-// Mobile menu toggle
-function initMobileMenu() {
-  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-  const mainNav = document.querySelector('.main-nav');
-  
-  if (mobileMenuToggle && mainNav) {
-    mobileMenuToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('mobile-menu-open');
-      
-      // Update toggle button appearance
-      const isOpen = mainNav.classList.contains('mobile-menu-open');
-      mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
-    });
-    
-    // Handle dropdown clicks on mobile
-    mainNav.querySelectorAll('.nav-store-dropdown').forEach(dropdownBtn => {
-      dropdownBtn.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          const dropdown = dropdownBtn.closest('.nav-dropdown');
-          dropdown.classList.toggle('dropdown-open');
-        }
-      });
-    });
-    
-    // Close menu when clicking a link (except dropdown toggles)
-    mainNav.querySelectorAll('.nav-link:not(.nav-store-dropdown)').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 768) {
-          mainNav.classList.remove('mobile-menu-open');
-          mobileMenuToggle.textContent = '☰';
-        }
-      });
-    });
-    
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (window.innerWidth <= 768 && 
-          !e.target.closest('.main-nav') && 
-          !e.target.closest('.mobile-menu-toggle')) {
-        mainNav.classList.remove('mobile-menu-open');
-        mobileMenuToggle.textContent = '☰';
-        // Close all dropdowns
-        mainNav.querySelectorAll('.nav-dropdown').forEach(dropdown => {
-          dropdown.classList.remove('dropdown-open');
-        });
-      }
-    });
-  }
-}
-
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', loadPortfolioData);

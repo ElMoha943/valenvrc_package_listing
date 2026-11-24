@@ -1,5 +1,3 @@
-import { baseLayerLuminance, StandardLuminance } from 'https://unpkg.com/@fluentui/web-components@2.6.1';
-
 // VPM data
 let LISTING_URL = "https://valenvrc.com/index.json";
 let vpmListingData = null;
@@ -229,22 +227,7 @@ const setupPackageInfoButtons = () => {
   });
 };
 
-const setTheme = () => {
-  const isDarkTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
-  if (isDarkTheme()) {
-    baseLayerLuminance.setValueFor(document.documentElement, StandardLuminance.DarkMode);
-  } else {
-    baseLayerLuminance.setValueFor(document.documentElement, StandardLuminance.LightMode);
-  }
-}
-
 (() => {
-  setTheme();
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    setTheme();
-  });
-
   const packageGrid = document.getElementById('packageGrid');
 
   // VPM Help Modal
@@ -335,24 +318,31 @@ const setTheme = () => {
 
     // Create thumbnails
     productsData.forEach((product, index) => {
-      const thumbnail = document.createElement('div');
+      const thumbnail = document.createElement('button');
+      thumbnail.type = 'button';
       thumbnail.className = 'product-thumbnail';
       thumbnail.dataset.productId = product.id;
+      thumbnail.setAttribute('aria-controls', 'productDetails');
+      thumbnail.setAttribute('aria-pressed', 'false');
       
       const img = document.createElement('img');
-      img.src = product.thumbnail;
       img.alt = product.name;
+      img.loading = index < 4 ? 'eager' : 'lazy';
+      img.decoding = 'async';
       img.onerror = () => {
+        img.onerror = null;
         img.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="200" height="200"%3E%3Crect fill="%23333" width="200" height="200"/%3E%3Ctext fill="%23666" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3ENo Image%3C/text%3E%3C/svg%3E';
       };
+      img.src = product.thumbnail;
       
       thumbnail.appendChild(img);
       thumbnailsContainer.appendChild(thumbnail);
 
       thumbnail.addEventListener('click', () => {
-        // Remove active class from all thumbnails
-        document.querySelectorAll('.product-thumbnail').forEach(t => t.classList.remove('active'));
-        thumbnail.classList.add('active');
+        const selected = thumbnailsContainer.querySelector('[aria-pressed="true"]');
+        if (selected === thumbnail) return;
+        selected?.setAttribute('aria-pressed', 'false');
+        thumbnail.setAttribute('aria-pressed', 'true');
         
         // Display product details
         detailsContainer.innerHTML = `
@@ -373,8 +363,8 @@ const setTheme = () => {
               </div>
             ` : ''}
             <div class="product-buttons">
-              ${product.jinxxyLink ? `<a href="${product.jinxxyLink}" target="_blank" class="product-btn jinxxy"><img src="assets/JinxxyIcon.webp" alt="Jinxxy">Get on Jinxxy</a>` : ''}
-              ${product.gumroadLink ? `<a href="${product.gumroadLink}" target="_blank" class="product-btn gumroad"><img src="assets/Gumroad_Icon.webp" alt="Gumroad">Get on Gumroad</a>` : ''}
+              ${product.jinxxyLink ? `<a href="${product.jinxxyLink}" target="_blank" class="product-btn jinxxy"><img src="assets/JinxxyIcon.webp" alt="">Get on Jinxxy</a>` : ''}
+              ${product.gumroadLink ? `<a href="${product.gumroadLink}" target="_blank" class="product-btn gumroad"><img src="assets/Gumroad_Icon.webp" alt="">Get on Gumroad</a>` : ''}
             </div>
           </div>
         `;
@@ -403,86 +393,9 @@ const setTheme = () => {
     });
   };
 
-  // Load data and initialize
-  Promise.all([loadData(), loadVPMData()]).then(() => {
+  loadData().then(() => {
     initProducts();
     initCommissions();
-    renderVPMPackages();
-    initSmoothScroll();
-    initMobileMenu();
   });
-  
-  // Mobile menu toggle
-  const initMobileMenu = () => {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    
-    if (mobileMenuToggle && mainNav) {
-      mobileMenuToggle.addEventListener('click', () => {
-        mainNav.classList.toggle('mobile-menu-open');
-        
-        // Update toggle button appearance
-        const isOpen = mainNav.classList.contains('mobile-menu-open');
-        mobileMenuToggle.textContent = isOpen ? '✕' : '☰';
-      });
-      
-      // Handle dropdown clicks on mobile
-      mainNav.querySelectorAll('.nav-store-dropdown').forEach(dropdownBtn => {
-        dropdownBtn.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            const dropdown = dropdownBtn.closest('.nav-dropdown');
-            dropdown.classList.toggle('dropdown-open');
-          }
-        });
-      });
-      
-      // Close menu when clicking a link (except dropdown toggles)
-      mainNav.querySelectorAll('.nav-link:not(.nav-store-dropdown)').forEach(link => {
-        link.addEventListener('click', () => {
-          if (window.innerWidth <= 768) {
-            mainNav.classList.remove('mobile-menu-open');
-            mobileMenuToggle.textContent = '☰';
-          }
-        });
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768 && 
-            !e.target.closest('.main-nav') && 
-            !e.target.closest('.mobile-menu-toggle')) {
-          mainNav.classList.remove('mobile-menu-open');
-          mobileMenuToggle.textContent = '☰';
-          // Close all dropdowns
-          mainNav.querySelectorAll('.nav-dropdown').forEach(dropdown => {
-            dropdown.classList.remove('dropdown-open');
-          });
-        }
-      });
-    }
-  };
-  
-  // Smooth scroll functionality
-  const initSmoothScroll = () => {
-    // Handle dropdown navigation items
-    document.querySelectorAll('.scroll-to-section, .footer-links a[href^="#"]').forEach(link => {
-      link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          const targetId = href.substring(1);
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Close dropdown if open
-            const dropdown = link.closest('.nav-dropdown');
-            if (dropdown) {
-              dropdown.classList.remove('active');
-            }
-          }
-        }
-      });
-    });
-  };
+  loadVPMData().then(renderVPMPackages);
 })();
