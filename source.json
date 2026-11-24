@@ -18,6 +18,9 @@
         {
             "name": "com.valenvrc.common",
             "releases": [
+                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.10.2/com.valenvrc.common.zip",
+                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.10.1/com.valenvrc.common.zip",
+                "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.10.0/com.valenvrc.common.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.9.2/com.valenvrc.common.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.9.1/com.valenvrc.common.zip",
                 "https://github.com/ElMoha943/com.valenvrc.common/releases/download/v2.8.0/valenvrc.common-v2.8.0.zip",
@@ -72,10 +75,7 @@
         {
             "name": "com.valenvrc.MPBEditor",
             "releases": [
-                "https://github.com/ElMoha943/MPBApplier/releases/download/v1.3.0/MPBApplier.zip",
-                "https://github.com/ElMoha943/VMPBUE/releases/download/v1.2.0/valenvrc.MPBEditor-v1.2.0.zip",
-                "https://github.com/ElMoha943/VMPBUE/releases/download/v1.1.0/valenvrc.MPBEditor-v1.1.0.zip",
-                "https://github.com/ElMoha943/VMPBUE/releases/download/v1.0.0/valenvrc.MPBEditor-v1.0.0.zip"
+                "https://github.com/ElMoha943/MPBApplier/releases/download/v1.3.0/MPBApplier.zip"
             ]
         }
     ]
